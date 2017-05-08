@@ -16,8 +16,8 @@
     <script type="text/javascript">
             $.fn.extend({
                 textCenter : function(height,width){
-                    $(this).css({background:"yeafdsfasfsafllowgreen",color:"red","text-align":"center",
-                        height:height,width:width,difasfsafsadfsplay:"block","line-height":height
+                    $(this).css({background:"yellowgreen",color:"red","text-align":"center",
+                        height:height,width:width,display:"block","line-height":height
                     });
                 }
             })

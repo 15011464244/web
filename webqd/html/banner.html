@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>
+		<meta charset="utf-8">
+		<link rel="stylesheet" type="text/css" href="../css/banner.css">
+	</title>
+</head>
+<style type="text/css">
+	*{margin: 0;padding:0;list-style-type: none;}
+	li{float: left;}
+	#outer{width: 800px;height: 360px;overflow: hidden;position: relative;}
+	#banner{width: 4800px;height: 360px;}
+	#banner li{width: 800px;height: 360px;}
+	#btn{position: absolute;top: 320px;left: 300px;width: 100px;}
+	#btn li{width: 20px;height: 20px;border-radius: 50%;background: rgba(0,0,0,0.5);text-align: center;line-height: 20px;}
+	#btn .now{background: #fff}
+	p{position: absolute;width: 30px;height: 100px;text-align: center;line-height: 100px;background: rgba(0,0,0,0.5);font-size: 30px;display: none}
+	#turnleft{top: 100px}
+	#turnright{top:100px;margin-left: 770px;}
+</style>
+<body>
+	<div id="outer">
+		<ul id="banner" style="transition:">
+			<li style="background:green">1</li>
+			<li style="background:red">2</li>
+			<li style="background:pink">3</li>
+			<li style="background:gray">4</li>
+			<li style="background:yellow">5</li>
+			<li style="background:green">1</li>
+		</ul>
+	
+	<ul id="btn">
+		<li class="now">1</li>
+		<li>2</li>
+		<li>3</li>
+		<li>4</li>
+		<li>5</li>
+	</ul>
+	<p id="turnleft" style="display:none"><</p>
+	<p id="turnright" style="display:none">></p>
+	</div>
+</body>
+<script type="text/javascript">
+	var outer = document.getElementById("outer");
+	var oul = document.getElementById("banner");
+	var btns = document.getElementById("btn").children;
+	var change = document.getElementsByTagName("p");
+	banner(outer,oul,btns,change,1000,800);
+	function banner(outer,oul,btns,change,duration,banwidth){
+		var time = setInterval(move,duration);
+		var time1;
+		var maxpage =btns.length;
+		var page = 0;
+		function move(){
+			oul.style.transition="all 2s";
+			console.log("page"+page)
+			page++;
+			if (page>maxpage) {
+				console.log("page1"+page);
+				oul.style.transition ="";
+				page=0;
+				oul.style.marginLeft ="0px";
+				time1 =setTimeout(function(){
+					clearInterval(time);
+					page++
+					oul.style.transition = "all 2s";
+					oul.style.marginLeft = page*(-banwidth)+"px";
+					for (var k = 0; k < btns.length; k++) {
+                    btns[k].className="";
+                	  }
+					btns[page].className = "now";
+					time =setInterval(move,duration);
+				},10);
+			}
+			oul.style.marginLeft = page*(-banwidth)+"px";
+			for (var k = 0; k < btns.length; k++) {
+                    btns[k].className="";
+                  }
+			btns[page>4?0:page].className = "now";
+		}
+		for (var i = 0; i < btns.length; i++) {
+			btns[i].index = i;
+			btns[i].onclick= function (){
+				for (var k = 0; k < btns.length; k++) {
+                    btns[k].className="";
+                  }
+				this.className = "now";
+				page = this.index;
+				oul.style.marginLeft = page*(-banwidth)+"px";
+			}
+		}
+		change[0].onclick =function(){
+			page--;
+			if (page<0) {
+				oul.style.transition ="";
+				page=maxpage;
+				oul.style.marginLeft = page*(-banwidth)+"px";
+				time1 = setTimeout(function(){
+					page--
+					oul.style.transition = "all 2s";
+					oul.style.marginLeft = page*(-banwidth)+"px";
+					for (var k = 0; k < btns.length; k++) {
+                    btns[k].className="";
+                	  }
+					btns[page].className = "now";
+				},10);
+			}
+			oul.style.marginLeft = page*(-banwidth)+"px";
+			for (var k = 0; k < btns.length; k++) {
+                    btns[k].className="";
+                  }
+			btns[page<0?3:page].className = "now";
+		}
+		change[1].onclick =function(){
+			move();
+		}
+		outer.onmouseover=function(){
+			clearInterval(time);
+			clearTimeout(time1);
+			change[0].style.display = "block";
+			change[1].style.display = "block";
+		}
+		outer.onmouseout=function(){
+			time = setInterval(move,duration);
+			change[0].style.display = "";
+			change[1].style.display = "";
+		}
+	}
+</script>
+</html>

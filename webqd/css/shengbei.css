@@ -1,0 +1,6 @@
+*{margin: 0px;padding: 0px;}
+.a{width: 100%;height: 100px;float: left;background: red;}
+.b{width: 100px; height: 100px;float: left;background: green; margin-left: -100%; position: relative;left: -100px;}
+.c{width: 100px; height: 100px;float: left;background: pink;margin-left: -100px;position: relative;right: -100px;}
+.aa{width: 400px;height: 100px; background: green;}
+i{background: url(../img/taobao_13.png) no-repeat center; width: 18px; height: 18px;display: block;}

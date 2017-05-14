@@ -1,0 +1,4 @@
+.border{padding:10px;border:2px solid black; margin-bottom: 25px;font-size: 15px;height: 30px;}
+input{margin-left: 40px;border: 0px;outline: none;}
+/*span{width: 80px;text-align: center;align:center;}*/
+.aa{float:left ;text-justify:inter-ideograph;text-align: justify; width: 80px; background:red; }

@@ -1,0 +1,11 @@
+*{margin: 0px;padding: 0px;}
+div{text-align: center;}
+.class1{width: 100px; height: 100px; margin-top: 0px; border-radius: 20px;background: green;margin: auto;}
+html:hover .class1{animation-delay: 0ms;animation-duration: 1s;animation-fill-mode: forwards;animation-name: ashui;}
+@keyframes ashui{
+	to{
+		width: 500px;
+		height: 500px;
+		margin-top: 100px;
+	}
+}

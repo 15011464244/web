@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>
+		
+	</title>
+	<meta charset="utf-8">
+</head>
+<style type="text/css">
+	
+</style>
+<body>
+	<div class="one" onclick="calc()" >
+		<button>1</button>
+		<button>2</button>
+		<button>c</button>
+		<button>+</button>
+		<button>-</button>
+		<button>=</button>
+	</div>
+	<textarea id="text"></textarea>
+	<div id="box" style="position:absolute;width:200px;height:200px;background:red;left:0px;">
+		
+	</div>
+	<div id="section" style="position:fixed; bottom:50px; right:50px;display:none;">
+		回到顶部
+	</div>
+	<div style="height:5000px;">
+		
+	</div>
+</body>
+<script type="text/javascript">	
+	var box = document.getElementById("box");
+	box.onmousedown =function(){
+		var offx = event.offsetX;
+		var offy = event.offsetY;
+		box.onmousemove = function(){
+			console.log(event.clientX);
+			console.log(event.clientY);
+			console.log("off"+offx);
+			box.style.left = event.clientX -offx+"px";
+			box.style.top = event.clientY -offy+"px";
+		}
+	}
+	box.onmouseup = function(){
+		box.onmousemove = null;
+	}
+
+
+
+	var sec  = document.getElementById("section");
+	window.onscroll = function(){
+		var scrolltop = document.documentElement.scrollTop+document.body.scrollTop;
+		console.log(scrolltop);
+		if (scrolltop>500) {
+			sec.style.display = "block";
+		}else{
+			sec.style.display = "none";
+		}
+		sec.onclick =function(){
+		document.body.scrollTop = 0;
+		}
+	}
+
+
+	function calc(){
+		var tet = document.getElementById("text");
+		var e = event||arguments[0];
+		var src = e.srcElement||e.target;
+		if (src.nodeName="BUTON") {
+			switch(src.innerHTML){
+				case "=":
+					tet.innerHTML = eval(tet.innerHTML);
+					break;
+				case "c":
+					tet.innerHTML = "";
+					break;
+				default:
+					tet.innerHTML+=src.innerHTML;
+					break;
+			}
+		}
+	}	
+
+</script>
+</html>

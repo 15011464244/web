@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+</head>
+<body>
+
+</body>
+<script type="text/javascript">
+	// var aa = /d$/;
+	// console.log(aa);
+	// console.log(typeof aa);
+	// console.log(aa.__proto__);
+	var str = "aabaca";
+	console.log(str.split(/a+/));
+	console.log(str.split("a"));
+	var str  = "abcdefgcd";
+	console.log(str.indexOf("cd"));
+	console.log(str.indexOf(/cd/));
+	console.log(str.search("cd"));
+	console.log(str.search(/cd/));
+	var str ="abcdefgcd";
+	console.log(str.search(/h/));
+	var str ="小电影，aaaaa小电影";
+	console.log(str.match(/小电影/));
+	console.log(str.match(/aa/g));
+	console.log(str.match("小电影"));
+	var aa = function(){
+		return "aaa";
+	}
+	console.log(str.replace("小电影",aa));
+	var reg = /abc/g;
+	var str  = "abcasdaffabc";
+	console.log(reg.exec(str));
+	console.log(reg.test(str));	
+	// var demo = prompt("不住徐输入空格");
+	// alert(!(/\s/.test(demo)));
+	var reg = /[^a-z]/;
+	console.log(reg.test("^a"));
+	var reg = /[^abc]/;
+	console.log(reg.test('a'));
+	var reg = /^abc/;//判断是否以abc开头
+	console.log(reg.test('abcaa'));
+	var reg = /abc/;
+	console.log(reg.test('aaaaabc'));
+	var reg = /[a-zA-Z0-9]/;
+	console.log(reg.test('中国'));
+	var reg = /xioabai$/;
+	console.log(reg.test("aaaxioabai"));
+	var reg = /\d/; //[0-9] 有数字
+	console.log(reg.test("aafaf19"));
+	var reg = /\D/; //[^0-9] 有非数字
+	console.log(reg.test("aaaa11"));
+	var reg = /\s/;  //有空白字符
+	console.log(reg.test("aa a"));
+	var reg = /\S/;  //有非空白字符
+	console.log(reg.test("		"));
+	var reg = /\w/; //[a-z]
+	console.log(reg.test("aaa"));
+	var reg = /\W/;  //[^a-zA-Z0-9];
+	console.log(reg.test("aaa"));
+	var reg = /aac?/g;
+	var str = "a, aaacc, aacaac"
+	console.log(str.match(reg));
+	var reg = /aa*/;
+	console.log(reg.test("aa"));
+	var reg = /abc?/;
+	console.log(reg.test("abc"));
+
+
+	var reg = /ab(cd)ef(hi)\2/;
+	console.log(reg.test('abcdefhihi'));
+	var reg = /ab(11)ef(222)\1\2/;
+	console.log(reg.test('ab11ef22211222'))
+
+
+	var reg = /\d{2,4}/g;
+    		// console.log(reg.test('11111'));
+    console.log(reg.exec('22n2n12345679111'));
+    console.log("123313231232313".match(reg));
+    var reg = /^1[3578]\d{9}$/;
+    var reg = /\W?/;
+    console.log(reg.test("aaaa"));
+    var str = " aafsdsdbbbbdafdfsb ";
+    // String.prototype.trim = function(){
+    // 	// return this.replace(/\s+/g,"");
+    // 		return this.replace(/a|b/g,"");	
+    // }
+    console.log(str.trim());
+    var str = "fsfdd1231fsfa213";
+    String.prototype.fundNum= function(){
+    	return this.match(/\d/g).join("");
+    }
+    console.log(str.fundNum());
+
+
+</script>
+</html>

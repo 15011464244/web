@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+</head>
+<style type="text/css">
+	*{margin: 0px;padding: 0px;}
+	table,tr,td{border: 1px solid gray;}
+	td{width: 20px;height: 20px;background: yellowgreen}
+	.red{background: red}
+</style>
+<body>
+<table cellspacing="0">
+	
+</table>
+</body>
+<script type="text/javascript">
+	var table =  document.getElementsByTagName("table")[0];
+	var maxTable =20;
+	var tds = [];
+	
+	for (var i = 0; i < maxTable; i++) {
+		var tr = document.createElement("tr");
+		var a =[];
+		for (var j = 0; j < maxTable; j++) {
+			var td = document.createElement("td");
+			tr.appendChild(td);
+			a.push(td);
+		}
+		tds.push(a);
+		table.appendChild(tr);
+	}
+	tds[3][4].className="red";
+	function Snake(){
+		this.bodyarr=[
+		{x:4,y:7},
+		{x:4,y:6},
+		{x:4,y:5},
+		{x:4,y:4}
+		]
+		this.direction ="right";
+		this.render();
+		var that = this;
+		document.onkeydown = function(event){
+			e = event||window.event;
+			console.log(e.keyCode);
+
+			switch(e.keyCode){
+				case 37:
+					if (that.direction =="right") {
+						return;
+					}
+					that.direction = "left";
+					break;
+				case 38:
+					if (that.direction =="down") {
+							return;
+						}
+					that.direction = "up";
+					break;
+				case 39:
+					if (that.direction =="left") {
+							return;
+						}
+					that.direction = "right";
+					break;
+				case 40:
+					if (that.direction =="up") {
+							return;
+						}
+					that.direction = "down";
+					break;
+				default:
+					console.log("键盘");
+			}
+	}
+	}
+	Snake.prototype.render = function(){
+		for (var i = 0; i < maxTable; i++) {
+			for (var j = 0; j < maxTable; j++) {
+				tds[i][j].className="";
+			}
+		}
+		console.log("aaa");
+		for (var i = 0; i < this.bodyarr.length; i++) {
+			tds[this.bodyarr[i].x][this.bodyarr[i].y].className ="red";
+		}
+	}
+	Snake.prototype.move = function(){
+		var self = this;
+		setInterval(function(){
+			self.bodyarr.pop();
+			switch(self.direction){
+				case "left":
+					self.bodyarr.unshift({x:self.bodyarr[0].x,y:self.bodyarr[0].y-1});
+					break;
+				case "right":
+					self.bodyarr.unshift({x:self.bodyarr[0].x,y:self.bodyarr[0].y+1});
+					break;
+				case "up":
+					self.bodyarr.unshift({x:self.bodyarr[0].x-1,y:self.bodyarr[0].y});
+					break;
+				case "down":
+					self.bodyarr.unshift({x:self.bodyarr[0].x+1,y:self.bodyarr[0].y});
+					break;
+				default:
+					console.log("meiyou");
+			}
+			self.render();
+		},1000);
+			
+	}
+
+	var aa = new Snake();
+	aa.move();
+
+
+</script>
+</html>

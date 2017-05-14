@@ -1,0 +1,259 @@
+*{margin: 0;padding: 0;}
+body{width: 999px;margin: 0 auto;}
+#a1{width: 999px;height: 100px;}
+#img1{margin-left: 19px;margin-top: 40px; width:"250px"; height:"23px"}
+#serch{width: 226;height: 26;background: rgb(241,241,241);float: right;margin-right: 20px;margin-top: 38px;}
+#serch_1{width: 188px;height: 26px;background: rgb(241,241,241);float: left; border: 0px;padding-left: 10px;}
+#serch_2{width: 26px;height: 26px; float: right; border: 0px;background:url(../img/serch_03.png) no-repeat center;}
+/*#a2{width:999px; height: 55px; background: rgb(48,48,48); float: left;}*/
+/*.second{color: white;border-color:rgb(70,70,70) ; border-width:0px 5px 0px 0px;float: left; width: 121px;vertical-align: center;line-height: 50px;
+		
+		}*/
+#a2 ul li a{text-decoration:none;}
+#a2 ul li{list-style-type: none;}
+#a2{height: 59px; background-image: linear-gradient(to top,#302430,#333);}
+#a2 ul{
+	height: 59px;
+	width: 967px;
+	margin: auto;
+	overflow: hidden;
+}
+#a2 ul li{
+	float: left;
+	height: 59px;
+	width: 120px;
+	text-align: center;
+	line-height: 59px;
+	border-right: 1px solid #484848;
+	overflow: hidden;
+}
+#a2 ul li a{
+	color: white;
+}
+#a2 ul li:hover{
+	background: #d34544;
+}
+
+#a3{ height: 463px; }
+#a3 img{
+	width: 100%;
+	height: 100%;
+}
+#a4{
+	height: 242px;
+}
+.article{
+	height: 208px;
+	margin-left: 18px;
+	margin-top: 34px;
+	float: left;
+
+}
+#news ul{
+	/*list-style-position: inside;*/
+	width: 480px;
+	margin-top: 20px;
+
+}
+.title{
+	font-size: 18px;
+	font-weight: 100;
+}
+#news ul li{
+	line-height: 24px;
+	font-size: 12px;
+	color: #989898;
+	list-style-type: none;
+	overflow: hidden;
+}
+
+
+#news ul li a{
+	width: 150px;
+	text-decoration: none;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	float: left;
+	color: rgb(82,82,82);
+}
+#news ul li time{
+	float: right;
+	margin-right: 30px;
+}
+#introduce{
+	width: 240px;
+	height: 242px;
+	background: #f1f1f1;
+	float: left;
+}
+#introduce div p{
+	font-size: 12px;
+	line-height: 24px;
+}
+#introduce div .p3{
+	color: rgb(173,173,173);
+}
+#recruit{
+	width: 259px;
+	height: 242px;
+	float: left;
+}
+#recruit img{
+	position: absolute;
+	right: 10px;
+	bottom: 10px;
+}
+#recruit p{
+	line-height:22px;font-size:12px;color:rgb(91,91,91);
+}
+#recruit button{
+	height: 18px;
+	width: 64px;
+	background: rgb(176,176,176);
+	color: white;
+	border: 0px;
+	position: absolute;
+	right: 150px;
+	bottom: 30px;
+}
+#a5{
+	height: 305px;
+}
+#a5 h1{
+	margin:26px 0px 15px 20px;
+	font-size: 18px;
+	font-weight: 100;
+}
+#a5 li{
+	list-style-type: none;
+	margin: 0 20px;
+	width: 210px;
+	float: left;
+	height: 210px;
+	
+}
+#a5 li img{
+	width: 100%;
+	height: 136px;
+}
+#a5 li p{
+	font-size:12px;line-height:24px;color:rgb(78,78,78);
+}
+#a6{
+	height: 250px;
+	background: rgb(229,229,229);
+	padding-top: 20px;
+	margin-bottom: 10px;
+}
+#a6 div{
+	float: left;
+}
+#a6 .ah1{
+	font-size: 20px;
+	line-height: 24px;
+	color: rgb(109,109,109);
+	margin-left: 30px;
+}
+#a6 .ahr{
+	margin-top: 10px;
+	margin-bottom: 20px;
+	margin-left: 20px;
+	margin-right: 20px; 
+	color: rgb(194,194,194);
+}
+#first ul{
+	float: left;
+	margin-left: 20px;
+}
+#first{
+	width: 500px;
+	height: 250px;
+}
+#second{
+	width: 200px;
+	height: 250px;
+}
+#third{
+	width: 299px;
+	height: 250px;
+}
+#a6 div .aa{
+	width: 130px;
+}
+#a6 div .bb{
+	width: 170px;
+}
+#a6 div .cc{
+	width: 110px;
+}
+#a6 div .dd{
+	margin-left: 30px;
+}
+#a6 ul li{
+	list-style-type: none;
+}
+#third img{
+	position: absolute;;
+	bottom: 25px;
+	right: 50px;
+}
+#a7{
+	height: 30px;
+}
+#footer1{
+	float: left;
+	line-height: 30px;
+}
+#footer3{
+	float: right;
+}
+#footer2{
+	float: right;
+	line-height: 30px;
+	color: rgb(142,142,142);
+}
+#a7{
+	font-size: 14px;
+}
+
+#a7 .i1{
+	display: block;
+	background: url(../img/wl_03.png) no-repeat center;
+	width: 30px;
+	height: 30px;
+	float: left;
+}
+#a7 .i2{
+	display: block;
+	background: url(../img/wl_04.png) no-repeat center;
+	width: 30px;
+	height: 30px;
+	float: left;
+}
+
+#a7 .i4{
+	display: block;
+	background: url(../img/wl_06.png) no-repeat center;
+	width: 30px;
+	height: 30px;
+	float: left;
+}
+#a7 .i5{
+	display: block;
+	background: url(../img/wl_07.png) no-repeat center;
+	width: 30px;
+	height: 30px;
+	float: left;
+}
+#a7 .i3{
+	display: block;
+	background: url(../img/wl_08.png) no-repeat center;
+	width: 30px;
+	height: 30px;
+	float: left;
+}
+#footer1 a{
+	text-decoration: none;
+	color: rgb(141,141,141);
+}

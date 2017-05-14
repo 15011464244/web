@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="../css/change.css">
+</head>
+<body>
+	<div id="bb">
+		<form action="" method="post">
+			<span>可以换肤的提交框</span><input type="button" name="" value="提交" class="button" id="button1"><input type="button" name="" value="返回" class="button"><br/>
+			<div class="haha"></div>
+			年龄<input type="text" name="" class="input1"><br/>
+			<div class="haha"></div>
+			体重<input type="text" name="" class="input1"><br/>
+			<div class="haha"></div>
+			最后的提交 <input type="text" name="">
+		</form>
+	</div>
+</body>
+<script type="text/javascript">
+	window.onload=function(){
+		var a = true;
+		var button1 = document.getElementById("button1");
+		var button = document.getElementsByClassName("button");
+		var bb = document.getElementById("bb");
+		console.log(window);
+		bb.style.width=screen.width+"px";
+		bb.style.height = screen.availHeight+"px";
+		console.log(bb.style.height);
+		console.log(button1);
+		button1.onclick = function(){
+			if (a) {
+				bb.style.background="url(../img/way.jpg) no-repeat center"
+				a=false;
+			}else{
+				bb.style.background="url(../img/Pond.jpg) no-repeat center"	
+				a=true;
+			}
+		}
+	}
+</script>
+</html>

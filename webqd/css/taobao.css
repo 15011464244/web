@@ -1,0 +1,322 @@
+*{margin: 0px;padding: 0px;}
+.left{float:left;}
+.right{float: right;}
+li{list-style-type: none;}
+a{text-decoration: none;}
+html{font:12px/1.5 tahoma,arial;}
+header{background: #f1f1f1; border-bottom: 1px solid #eee;}
+#header,.search,.banner-top,.banner-list{width: 1190px;margin: auto;}
+#header{height: 35px;}
+#header a{color: #6c6c6c;}
+#header a:hover{color: #ff4204;}
+#header .left a{line-height: 35px;}
+#header .login a{color: #ff4204;}
+#header .register{margin: 0px 20px 0px 9px;}
+.header-right{width: 590px;} 
+.header-right .left>a{
+	display: block;
+	padding: 0px 7px;
+	border: 1px solid #f1f1f1;
+	border-top: 0px;
+	position: relative;
+	z-index: 10px;
+}
+.header-right>.left:hover>a{
+	border-bottom: 1px solid #fff;
+	border-right: 1px solid #e4dde4;
+	border-left: 1px solid #e4dde4;
+	background: #fff;
+}
+.header-select{
+	width: 7px;
+	height: 35px;
+	background: url(../img/xiala2.png) no-repeat center;
+	background-size:100%;
+	margin-left: 10px;
+}
+.header-right>li{position: relative;}
+.header-right>li:hover .select-section{
+	display: block;
+}
+.select-section{
+	padding: 7px 0;
+	display: none;
+	position: absolute;
+	top: 35px;
+	left: 0;
+	background: #fff;
+	border: 1px solid #e4dde4;
+}
+.select-section li{
+	padding: 7px;
+	white-space: nowrap;
+	height: 20px;
+}
+#header .select-section li a{
+	line-height: 20px;
+}
+.select-section li:hover{
+	background: #e4dde4;
+}
+.banner-top{
+	width: 1190px;
+	height: 45px;
+	margin: auto;
+}
+.logo{
+	width: 190px;
+	height: 130px;
+}
+.search{height: 165px;}
+.search-top li{
+	float: left;
+	width: 50px;
+	text-align: center;
+	line-height: 25px;
+	height: 25px;
+	color: #ff5400;
+	/*color: #fff;*/
+	font-weight: 700;
+	/*background:#ff5400;*/
+}
+.search-right{width: 670px;height: 88px; float: left; margin-top: 32px;margin-left: 80px;}
+.search-red-box{ width: 626px;height: 39px; background: rgb(252,83,0); }
+.search-red-box input{ border: 0px; width: 468px; height: 35px; line-height: 35px; margin-top: 2px; margin-left: 2px;background: #fff;}
+.picture {width: 35px; height: 35px;background:#fff url(../img/taobao_03.png) no-repeat center; margin-top: 2px;}
+.search-red-box button{ width: 120px; height: 39px; background: rgb(252,83,0); 
+				color: white;font-size: 20px; line-height: 39px;text-align: center; border: 0px;}
+.search-last{font-size: 12px;width: 35px; text-align: center;color: rgb(106,106,106);}
+.search-bottom{font-size: 12px;margin-top: 10px;color: rgb(106,106,106);}
+.search-bottom li{
+	float: left;
+	margin-right: 10px;
+}		
+.search-bottom li:last-child{
+	float: right;
+	margin-right: 42px;
+}
+.search-title{
+	float: left;
+	width: 1190px;
+	height: 35px;
+}		
+.search-title-left{
+	float: left;
+	width: 190px;
+	height: 35px;
+	font-size: 12px;
+	background: rgb(255,101,64);
+	color:white;
+}
+.search-title-left span{
+	float: left; 
+	line-height: 35px;
+	margin-left: 10px;
+}
+.search-title-left i{
+	float: right;
+	width: 20px;
+	height: 35px;
+	background: rgb(255,101,64) url(../img/taobao_04.png) no-repeat center;
+}
+.search-title-right{
+	float: left;
+}	
+.search-title-right li{
+	float: left;
+	margin-left: 20px;
+	font-size: 17px;
+	font-weight: 900;
+	line-height: 35px;
+	color: gray;
+}
+.search-title-right li a{
+	color: black;
+}
+.search-title-right .search-title-right-red{
+	color: rgb(252,83,0);
+}
+/*----------------------------------------------left and right------------------------------------------------------------*/
+.all{width: 100%;background: #f1f1f1;height: 3000px;}
+.box{width: 1190px;margin: auto;}
+.left-box{width: 890px;float: left;}
+.right-box{width: 290px;float: right; height: 3000px;background: green;margin-top: 10px;}
+
+
+/*----------------------------------------------banner---------------------------------------------------------*/
+.banner-list{width: 100%;height: 630px;}
+.zuoce{
+	width: 190px;
+	float: left;
+}
+.zuoce ul{
+	padding-top: 10px;
+	width: 190px;
+	background: rgb(255,101,64);
+	position: relative;
+	padding-bottom: 1px;
+}
+.zuoce ul li .icon-left{
+	float: left;
+	width: 16px;
+	height: 16px;
+	background: rgb(255,101,64) url(../img/taobao_06.png) no-repeat -2px 2px;
+
+}
+.zuoce ul li .span{
+	float: left;
+	margin-left: 5px;
+	width: 150px;
+	height: 16px;
+}
+.zuoce ul li{
+	height: 16px;
+	color: white;
+	margin-bottom: 14px;
+}
+.zuoce ul li a{
+	font-size: 14px;
+	line-height: 14px;
+	height: 14px;
+	color: white;
+}
+.zuoce ul li:last-child{ margin-bottom: 10px; }
+.zuoce ul li .icon-right{
+	float: right;
+	width: 16px;
+	height: 16px;
+	background: rgb(255,101,64) url(../img/taobao_05.png) no-repeat -3px 2px;
+}
+.zuoce ul li .zuoce-right{
+	height: 680px;
+	width: 700px;
+	background: green;
+	position: absolute;
+	left: 190px;
+	top: 0px;
+	display: none;
+}
+.zuoce .icon-bottom{width: 190px; height: 40px; display: block; background: url(../img/taobao_07.png) no-repeat center;}
+.youce{
+	width: 700px;
+	float: left;
+}
+.youce .p1{width: 520px;height: 280px; margin-left: 10px;margin-top: 10px;margin-right: 10px;}
+.youce .p2{width: 160px; height: 280px; margin-top: 10px;}
+.third{float: left;width: 520px; margin-left: 10px;}
+.third .tianmao{width: 520px;height: 20px;margin-top: 15px;}
+.tianmao img,.tianmao h4,.tianmao .remen{float: left;}
+.tianmao img{ height: 16px;margin-top: 4px; }
+.tianmao h4{margin-top: 4px; margin-left: 5px;}
+.tianmao .number{float: right;}
+.tianmao .remen{margin-top: 4px; margin-left: 5px;}
+.third ul li{width: 129px;background: #fff;border-right: 1px solid rgb(241,241,241);float: left;}
+.third ul {border-top: 2px solid red; width: 520px;height: 198px;background: #fff;}
+.third ul li .h1{color: red; margin-left: 6px;}
+.third ul li .h2{margin-left: 6px;}
+.third ul li .h3{color: gray; margin-left: 6px;}
+.third ul li img{margin-top: 5px;margin-left: 10px;}
+.fourth{margin-left: 10px; width: 160px;float: left;}
+.fourth h5{height: 20px;margin-top: 15px;line-height: 20px;color: gray; font-weight: 700;}
+.banner-list-left-bottom{width: 890px;height: 80px;margin-top: 10px; background: #fff;float: left;}  
+.banner-list-left-bottom li{width: 170px; float: left;margin-top: 8px;padding-left: 6px;}
+.banner-list-left-bottom li>i{width: 64px; height: 64px;border-radius:50%;border: 1px solid gray; background:url(../img/taobao_13.png) no-repeat center;
+						 float: left; background-size: 100%;}
+.tunhuo{float: left;width: 90px;margin-left: 10px;}
+.tunhuo div i{float: left;width: 13px;height: 13px; background: url(../img/taobao_14.png) no-repeat center;}
+.tunhuo div span{float: left;font-size: 13px;color: gray;height: 13px;line-height: 13px;}
+.tunhuo div {margin-top: 2px;}
+/*==========================================wochangguangde======================================================*/
+.wochangguangde{background: rgb(241,241,241);width: 100%;height: 784px;}
+.title{width: 890px;height: 50px;}
+.title-common{height: 30px; margin-left: 336px;width: 300px;float: left; margin-top: 10px;}
+.title-common .line1{float: left;width: 60px;margin-right: 10px; line-height: 30px;height: 30px;background: url(../img/taobao_15.png) no-repeat center;}
+.title-common .icon1{width:22px;height: 30px; line-height: 30px;float: left;background: url(../img/taobao_16.png) no-repeat center;margin-right: 5px;}	
+.title-common h2{font-size: 18px;float: left;line-height: 30px;height: 30px;}
+.title-common .line2{float: left;margin-left:10px; width: 60px;line-height: 30px;height: 30px;background: url(../img/taobao_15.png) no-repeat center;}
+.title span{float: right; width: 64px;height: 20px;margin-top: 20px; margin-right: 10px; border-radius: 8px;background: #fff;text-align: center;font-size: 12px;line-height: 20px;}
+.wochangguangde .article{width: 890px;}
+.wochangguangde .article-li{width: 440px;height: 360px;float: left;color: white;border: 1px solid green;margin-bottom: 10px;margin-right: 3px;}
+.wochangguangde .article-li-left{width: 100px;height: 360px;float: left;background:rgb(79,189,46);}
+.wochangguangde .article-li-left section{width: 100px;height: 100px;background: rgb(66,195,66);}
+.wochangguangde .article-li-left section i{height: 10px;display: block;}
+.wochangguangde .article-li-left section h1{ text-align: center; font-size: 24px;margin-bottom: 5px; font-weight: 1000;}
+.wochangguangde .article-li-left section h5{text-align: center; font-size: 13px;color: rgb(169,222,160);}
+.wochangguangde .article-li-left h3{margin-left: 15px;margin-bottom: 5px;margin-left: 10px;}
+.wochangguangde .article-li-left ul li a{float: left; font-size: 12px; font-weight: 400;margin: 0px 10px;background: rgb(117,203,76);color: white;}
+.wochangguangde .article-li-left ul li a span{margin: 5px 10px;}
+.wochangguangde .article-li-left ul li { height: 20px;}
+.article-li-right{width: 340px;height: 360px;background: #fff;float: left;}
+.article-li-right-top { width: 340px;height: 199px; background: black;color: black; border-bottom: 1px solid gray;}
+.article-li-right-top .d1{height: 199px;width: 100px; background: green;float: left;overflow: hidden;border-right: 1px solid gray;}
+.article-li-right-top .d1 h5{margin-top: 5px;font-size: 10px;font-weight: 200;margin-left: 5px;}
+.article-li-right-top .d1 .span2{font-weight: 200;font-size: 13px;}
+.article-li-right-top .d1 .span1{font-weight: 900;font-size: 13px;margin-left: 5px;}
+.article-li-right-top .d1 i{display: block;width: 100px;height: 150px;background: url(../img/taobao_17.png) no-repeat center;margin-top:9px;}
+.article-li-right-top .d2{height: 199px;width: 100px; background: pink; float: left; border-right: 1px solid gray;}
+.article-li-right-top .d3{height: 199px;width: 138px; background: orange;float: left;}
+.article-li-right-top .d2-top{height: 99px;width: 100px;background: url(../img/taobao_10.png) no-repeat center;overflow: hidden;background-size: 100%;border-bottom: 1px solid gray;}	
+.article-li-right-top .d2-top h5{height: 30px;font-size: 12px;text-align:center;background: #fff;opacity: 0.7;margin-top: 69px;overflow: hidden;}
+
+.article-li-right-top .d2-bottom{height: 99px;width: 100px;background: url(../img/taobao_10.png) no-repeat center;overflow: hidden;background-size: 100%;}	
+.article-li-right-top .d2-bottom h5{height: 30px;font-size: 12px;text-align:center;background: #fff;opacity: 0.7;margin-top: 69px;overflow: hidden;}
+.article-li-right-top .d3 h3{font-size: 12px;color: gray;margin-left: 12px;font-weight: 400;}
+.article-li-right-top .d3 h1{font-size: 14px;color: black;margin-left: 12px;font-weight: 800;}
+.article-li-right-top .d3 h4{font-size: 12px;margin-left: 12px;font-weight: 400;}
+.article-li-right-top .d3 h5{font-size: 12px;color: white;background: black; width: 80px;margin-left: 12px;font-weight: 400;}
+.article-li-right-top .d3 i{background: url(../img/taobao_11.png) no-repeat center;background-size: 100%;display: block;width: 138px;height: 128px;}
+.article-li-right-top .d3{overflow: hidden;}
+.article-li-right-middle{height: 79px;width: 340px; color: black;background-color: green;border-bottom: 1px solid gray;}
+.article-li-right-middle li{float: left;}
+.article-li-right-middle li i {width: 85px; height: 60px;background: url(../img/taobao_18.png) no-repeat center;display: block;}
+.article-li-right-middle li span{font-size: 13px; height: 20px;line-height: 20px;text-align: center;width:85px;display: block;}
+/*------------------------------------------------shishang---------------------------------------------------*/
+
+.shishang{background: rgb(241,241,241);width: 100%;height: 310px; }
+.shishang ul{ width: 890px; }
+.shishang ul li{ background: #fff; height: 260px; }
+.fashion{float: left;width: 221px;border-right: 2px solid gray;}
+.fashion-top{width: 221px;height: 40px;border-bottom: 1px solid gray;}
+.fashion-top .picture1{float: left;width: 18px; height: 18px;background: url(../img/taobao_21.png) no-repeat center;margin-left: 60px;margin-top: 15px;}
+.fashion-top span{float: left;height: 18px; line-height: 18px;font-size: 18px;color: pink;padding: 0px 10px;margin-top: 15px;}
+.fashion-top .picture2{float: left;width: 20px; height: 18px;background: url(../img/taobao_22.png) no-repeat center;margin-top: 15px;}
+.fashion-bottom-left{padding: 10px;	height: 199px;width: 90px;border-right: 1px solid gray;float: left;}
+.fashion-bottom-left img{ height: 159px;width: 90px; background: green;display: block; }
+.fashion-bottom-left h5{ height: 35px;width: 80px; background: rgb(251,0,86);color: white;font-size: 13px;padding-left: 10px;padding-top: 5px;}
+.fashion-bottom-right {float: left; overflow: hidden;}
+.fashion-bottom-right .coner{width: 110px; height: 109px; overflow: hidden;}
+.fashion-bottom-right .coner1{margin:10px; width: 90px; height: 89px; background: url(../img/taobao_20.png) no-repeat center;position: relative;}
+.fashion-bottom-right .coner1 h5{height: 20px; width: 100%;font-size: 13px;line-height: 20px;background: white;
+ 								; opacity: 0.7;text-align: center;display: block;position: absolute;left: 0px;top:79px;}
+
+/*---------------------------------------pinzhi---------------------------------------------------*/
+.pinzhi{background: rgb(241,241,241);width: 100%;height: 310px; }
+.pinzhi>ul{ width: 890px; }
+.pinzhi>ul>li{ background: #fff; height: 260px; float: left;width: 221px;border-right: 2px solid gray; }
+.pinzhi-top{width: 221px;height: 40px;border-bottom: 1px solid gray;}
+.pinzhi-top .picture1{float: left;width: 18px; height: 18px;background: url(../img/taobao_21.png) no-repeat center;margin-left: 60px;margin-top: 15px;}
+.pinzhi-top span{float: left;height: 18px; line-height: 18px;font-size: 18px;color: pink;padding: 0px 10px;margin-top: 15px;}
+.pinzhi-top .picture2{float: left;width: 20px; height: 18px;background: url(../img/taobao_22.png) no-repeat center;margin-top: 15px;}
+.pinzhi-middle-left{padding: 10px;	height: 139px;width: 90px;border-right: 1px solid gray;border-bottom: 1px solid gray;float: left;}
+.pinzhi-middle-left i{width: 90px; height: 89px; background: url(../img/taobao_20.png) no-repeat center;display: block;}
+.pinzhi-middle-left h3{font-size: 14px;font-weight: 500;}
+.pinzhi-middle-left h5{font-size: 12px; font-weight: 100;}
+.pinzhi-middle-right{padding: 10px;	height: 139px;width: 90px;float: left;border-bottom: 1px solid gray;}
+.pinzhi-middle-right i{width: 90px; height: 89px; background: url(../img/taobao_20.png) no-repeat center;display: block;}
+.pinzhi-middle-right {font-size: 14px;font-weight: 500;}
+.pinzhi-middle-right {font-size: 12px; font-weight: 100;}
+.pinzhi-middle-bottom{width: 100%;height: 60px;font-size: 12px;}
+.pinzhi-middle-bottom li{float: left;text-align: center;width: 73px; margin-top: 10px;}
+/*-------------------------------------------------shihui------------------------------------------------*/
+.shihui{background: rgb(241,241,241);width: 100%;height: 330px; }
+.shihui ul{width: 890px;height: 139px;}
+.shihui-left{ float: left; width: 170px; height: 109px;border-bottom: 1px solid gray;border-right: 1px solid gray;
+				background: #fff url(../img/taobao_23.png) no-repeat right bottom; padding: 15px;}
+.shihui-left section {height: 18px;}				
+.shihui-left section span{color: rgb(255,50,67);font-size: 18px;height: 18px;line-height: 18px;font-weight: 900;float: left;}
+.shihui-left section i{width: 20px; height: 18px; float: left;background: url(../img/taobao_22.png) no-repeat center; margin-left: 10px;}
+.shihui-left h2{font-size: 13px;margin-top: 10px;}
+.shihui-left h5{font-size: 14px;margin-bottom: 10px;color: gray;}
+.shihui-left>span{ display: block; text-align: center; font-size: 12px; border-radius: 10px; width: 76px;height: 20px;line-height: 20px;border: 1px solid rgb(255,102,58);color:rgb(255,102,58) }
+
+

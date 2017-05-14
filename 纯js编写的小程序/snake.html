@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>snake</title>
+    <style media="screen">
+      table,tr,td{
+        border:1px solid #000;
+      }
+      td{
+        width: 18px;
+        height: 18px;
+      }
+      .red{
+        background-color: red;
+      }
+    </style>
+  </head>
+  <body>
+  	<span></span>分
+    <table id="table">
+
+    </table>
+  </body>
+    <script type="text/javascript">
+    // 绘制地图
+    var table = document.getElementById("table");
+   var span =  document.getElementsByTagName("span")[0];
+   span.innerHTML = 0;
+    var maxTable = 20; //最大表格
+    var tds = []; //把表格都存为二维数组 方便蛇身读取
+    for(var i = 0; i < maxTable; i++){
+        var tr = document.createElement("tr");
+        // 声明一个空数组，用来存放里面的td
+        var thisrowid = [];
+        for(var j = 0; j < maxTable; j++){
+            var td = document.createElement("td");
+            tr.appendChild(td);
+            // 把td追加到里面行的数组
+            thisrowid.push(td);
+        }
+        // console.log(thisrowid);
+        // 把行和列的数组追加到一个新的数组
+        tds.push(thisrowid);
+        table.appendChild(tr);
+    }
+    console.log(tds);
+      // tds[4][4].className = "red";
+      // tds[4][5].className = "red";
+      // tds[4][6].className = "red";
+      // tds[4][7].className = "red";
+      // tds[4][8].className = "red";
+      function Snake(){
+          this.bodyArr = [
+            {x:4,y:8},
+            {x:4,y:7},
+            {x:4,y:6},
+            {x:4,y:5}
+          ];
+					this.m = parseInt(Math.random()*20);
+          this.t = parseInt(Math.random()*20);
+          this.shiwu = tds[this.m][this.t];
+          
+             this.render();
+             this.bingEvent();
+          this.direction = "right";
+          
+      }
+
+      Snake.prototype.render = function(){
+          // 每一秒清空所有的className 的名字
+          for(var i = 0; i < maxTable; i++){
+              for(var j = 0; j < maxTable; j++){
+                  tds[i][j].className = "";
+              }
+          }
+          // 渲染小蛇
+          // 画出一条蛇
+          for(var a = 0; a < this.bodyArr.length; a++){
+          	console.log(this);
+          	var c = this.bodyArr[a].x;
+          	
+          	var b = this.bodyArr[a].y;
+              tds[c][b].className ="red";
+          }
+          this.shiwu.className = "red";
+      }
+      // 让蛇动起来
+      Snake.prototype.move = function(){
+          this.bodyArr.pop(); //删除尾巴
+          switch (this.direction) {
+            case "right":
+                this.bodyArr.unshift({
+                  x : this.bodyArr[0].x,
+                  y : this.bodyArr[0].y + 1
+                })
+
+              break;
+            case "up":
+                this.bodyArr.unshift({
+                  x : this.bodyArr[0].x -1,
+                  y : this.bodyArr[0].y
+                })
+
+              break;
+            case "down":
+                this.bodyArr.unshift({
+                  x : this.bodyArr[0].x +1,
+                  y : this.bodyArr[0].y
+                })
+
+              break;
+            case "left":
+                this.bodyArr.unshift({
+                  x : this.bodyArr[0].x,
+                  y : this.bodyArr[0].y - 1
+                })
+
+              break;
+            default:
+
+          }
+          if(this.bodyArr[0].x ==this.m&&this.bodyArr[0].y==this.t){
+          	span.innerHTML ++;
+          	this.shiwu.className = "";
+          	var that = this;
+          	function aa(){
+          		that.m= parseInt(Math.random()*20);
+		          that.t= parseInt(Math.random()*20);
+		          for(var i=0;i<that.bodyArr.length;i++){
+		          	if(that.m == that.bodyArr[i].x&&that.t==that.bodyArr[i].y){
+		          		console.log(that.m);
+		          		aa();
+		          	}
+		          }
+	          }
+          	aa();
+	          this.shiwu = tds[this.m][this.t];
+	          var newx =0;
+	          var newy =0;
+	          if(this.bodyArr[this.bodyArr.length-2].x == this.bodyArr[this.bodyArr.length-1].x){
+	          	if(this.bodyArr[this.bodyArr.length-2].y > this.bodyArr[this.bodyArr.length-1].y){
+	          		newx = this.bodyArr[this.bodyArr.length-1].x;
+	          		newy = this.bodyArr[this.bodyArr.length-1].y-1;
+	          	}else{
+	          		newx = this.bodyArr[this.bodyArr.length-1].x;
+	          		newy = this.bodyArr[this.bodyArr.length-1].y+1;
+	          	}	
+	          }else{
+	          	if(this.bodyArr[this.bodyArr.length-2].x > this.bodyArr[this.bodyArr.length-1].x){
+	          		newx = this.bodyArr[this.bodyArr.length-1].x-1;
+	          		newy = this.bodyArr[this.bodyArr.length-1].y;
+	          	}else{
+	          		newx = this.bodyArr[this.bodyArr.length-1].x+1;
+	          		newy = this.bodyArr[this.bodyArr.length-1].y;
+	          	}	
+	          }
+          this.bodyArr.push({
+	          	x:newx,
+	          	y:newy
+	         });
+          }
+          
+          for (var i=2 ;i<this.bodyArr.length;i++) {
+          	if(this.bodyArr[0].x==this.bodyArr[i].x&&this.bodyArr[0].y==this.bodyArr[i].y){
+          		alert("结束了");
+          		location.reload();
+          	}
+          }
+          if(this.bodyArr[0].x>19||this.bodyArr[0].x<0||this.bodyArr[0].y>19||this.bodyArr[0].y<0)
+          {
+          	
+          	alert("结束了");
+          	location.reload();
+          }
+ 			         
+      }
+
+      Snake.prototype.bingEvent = function(){
+          var self = this;
+          document.onkeydown = function(event){
+              event = event || window.event;
+              switch (event.keyCode) {
+                case 37:
+                    if (self.direction == "right") {
+                        return;
+                    }
+                    self.direction = "left";
+                  break;
+                case 38:
+                    if (self.direction == "down") {
+                        return;
+                    }
+                    self.direction = "up";
+                  break;
+                case 39:
+                    if (self.direction == "left") {
+                        return;
+                    }
+                    self.direction = "right";
+                  break;
+                case 40:
+                    if (self.direction == "up") {
+                        return;
+                    }
+                    self.direction = "down";
+                  break;
+                default:
+
+              }
+
+          }
+      }
+
+
+          //
+          // 随机绘制一个食物
+          // 蛇吃到食物会加长 然后 食物消失，
+          // 又重新随机出现一个食物
+          // 蛇不能掉头
+          // 不能吃到自己
+          // 不能碰到边界
+          // 食物出现的位置不能在蛇身上
+          // 分数
+          var snake = new Snake();
+          setInterval(function(){
+              snake.move();
+              snake.render();
+          },1000)
+    </script>
+</html>

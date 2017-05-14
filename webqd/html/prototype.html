@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>
+		
+	</title>
+	<meta charset="utf-8">
+</head>
+<body>
+
+</body>
+<script type="text/javascript">
+	function People(eat,say){
+		this.eat = eat;
+		this.say =say;
+	}
+	function Student(eat,say,sex){
+		// this.constructor.apply(this,arguments);
+		this.eat = eat;
+		this.say = say;
+		console.log(this);
+		// People.apply(this,[eat,say]);
+		// this.sex= sex;
+	}
+	Student.prototype = new People("chi","我是学生");
+	var a = new Student();
+	console.log(a);
+	var arr = new Array(1,3,4,5);
+	console.log(arr);
+
+
+</script>
+</html>

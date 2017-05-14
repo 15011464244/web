@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+</head>
+<style type="text/css">
+	div{background: greenyellow;width: 50px;height: 100px;border: 1px solid gray;float: left;line-height: 100px;
+		text-align: center;color: yellow}
+	textarea{width: 400px; height: 200px;position: absolute;margin: 0 auto;left: 0;right: 0;font-size: 20px;
+		bottom: 100px; display: none;}
+	.down{background: green}
+	section{margin: 0 auto;height: 200px;width: 370px;margin-top: 100px;position: absolute;}
+	img{width: 700px;height: 700px;}
+</style>
+<body>
+	<audio src="../music/1.mp3"></audio>
+	<audio src="../music/2.mp3"></audio>
+	<audio src="../music/3.mp3"></audio>
+	<audio src="../music/4.mp3"></audio>
+	<audio src="../music/5.mp3"></audio>
+	<audio src="../music/6.mp3"></audio>
+	<audio src="../music/7.mp3"></audio>
+	<img src="../img/dujiaoxi.jpg">
+	<section>
+		<div>1</div>
+		<div>2</div>
+		<div>3</div>
+
+		<div>4</div>
+		<div>5</div>
+		<div>6</div>
+
+		<div>7</div>
+	</section>
+	<textarea></textarea>
+</body>
+<script type="text/javascript">
+	var div = document.getElementsByTagName("div");
+	var audio = document.getElementsByTagName("audio");
+	var textarea = document.getElementsByTagName("textarea")[0];
+	var isonclick  =false;//判断是否当前在点击
+	console.log(audio);
+	document.onkeydown = function(event){
+			for (var i = 0; i < div.length; i++) {
+				div[i].className = "";
+			}
+			var e = event||window.event;
+			// console.log(e.keyCode+e.key);
+			switch(e.keyCode){
+				case 65://a
+					div[0].className = "down";
+					
+					if (isonclick==0) {
+						audio[0].load();
+						audio[0].play();
+						textarea.value +="1 ";	
+					}
+					isonclick = 65;
+					break;
+				case 83://s
+					div[1].className = "down";
+					
+					if (isonclick==0) {
+						audio[1].load();
+						audio[1].play();
+						textarea.value +="2 ";	
+					}
+					isonclick = 65;
+					break;
+				case 68://d
+					div[2].className = "down";
+					
+					if (isonclick==0) {
+						audio[2].load();
+						audio[2].play();
+						textarea.value +="3 ";	
+					}
+					isonclick = 65;
+					break;
+				case 70://f
+					div[3].className = "down";
+					
+					if (isonclick==0) {
+						audio[3].load();
+						audio[3].play();
+						textarea.value +="4 ";	
+					}
+					isonclick = 65;
+					break;
+				case 74://j
+					div[4].className = "down";
+					
+					if (isonclick==0) {
+						audio[4].load();
+						audio[4].play();
+						textarea.value +="5 ";	
+					}
+					isonclick = 65;
+					break;
+				case 75://k
+					div[5].className = "down";
+					
+					if (isonclick==0) {
+						audio[5].load();
+						audio[5].play();
+						textarea.value +="6 ";	
+					}
+					isonclick = 65;
+					break;
+				case 76://l
+					div[6].className = "down";
+					
+					if (isonclick==0) {
+						audio[6].load();
+						audio[6].play();
+						textarea.value +="7 ";	
+					}
+					isonclick = 65;
+					break;
+				case 91:
+					audio[0].load();
+					audio[0].play();
+					break;
+				case 32:
+					textarea.value +="   |    ";
+					break;
+				default:
+			}
+		}
+	document.onkeyup = function(event){
+			var e = event||window.event;
+			console.log(e.keyCode+e.key);
+			isonclick = 0;
+			switch(e.keyCode){
+				case 65://a
+				setTimeout(function(){
+					div[0].className = "";
+				},100);
+					break;
+				case 83://s
+					setTimeout(function(){
+						div[1].className = "";
+					},100);
+					break;
+				case 68://d
+					setTimeout(function(){
+						div[2].className = "";
+					},100);
+					break;
+				case 70://f
+					setTimeout(function(){
+						div[3].className = "";
+					},100);
+					break;
+				case 74://j
+					setTimeout(function(){
+						div[4].className = "";
+					},100);
+					break;
+				case 75://k
+					setTimeout(function(){
+						div[5].className = "";
+					},100);
+					break;
+				case 76://l
+					setTimeout(function(){
+						div[6].className = "";
+					},100);
+					break;
+				case 91:
+					audio[0].load();
+					audio[0].play();
+					break;
+				default:
+			}
+	}
+	// for (var i = 0; i < div.length; i++) {
+	// 	div[i].index = i;
+	// 	var timer;
+
+	// 	div[i].onclick=function(){			
+	// 		audio[this.index].load();
+	// 		audio[this.index].play();
+	// 		textarea.value += this.index+1+"";	
+	// 	}
+	// }
+</script>
+
+
+<!-- 
+Last login: Thu Apr 20 09:03:48 on console
+bogon:~ apple$ cd ~/.ssh
+-bash: cd: /Users/apple/.ssh: No such file or directory
+bogon:~ apple$ cd~/.ssh
+-bash: cd~/.ssh: No such file or directory
+bogon:~ apple$ ls
+Applications		HBuilder		Music
+Desktop			HBuilderProjects	Pictures
+Documents		Library			Public
+Downloads		Movies
+bogon:~ apple$ git --version
+git version 2.10.1
+bogon:~ apple$ git config --global user.email "1422425666@qq.com" 
+bogon:~ apple$ git credential-osxkeychain
+usage: git credential-osxkeychain <get|store|erase>
+bogon:~ apple$ git remote add origin https://github.com/15011464244/web.git
+fatal: Not a git repository (or any of the parent directories): .git
+bogon:~ apple$ git remote add origin git@github.com:15011464244/web.git
+fatal: Not a git repository (or any of the parent directories): .git
+bogon:~ apple$ cd ~
+bogon:~ apple$ ssh-keygen
+Generating public/private rsa key pair.
+Enter file in which to save the key (/Users/apple/.ssh/id_rsa): 
+Created directory '/Users/apple/.ssh'.
+Enter passphrase (empty for no passphrase): 
+Enter same passphrase again: 
+Your identification has been saved in /Users/apple/.ssh/id_rsa.
+Your public key has been saved in /Users/apple/.ssh/id_rsa.pub.
+The key fingerprint is:
+SHA256:oRGXhuo2iegZDC7vr9q+rTUs7pFsACizOUS35wNJMdE apple@bogon
+The key's randomart image is:
++---[RSA 2048]----+
+| . *+ ....       |
+|o o +E.oo        |
+|=. + o...        |
+|=+  =  o .       |
+|O. o +. S        |
+|oB.o= .          |
+|o.O.+.           |
+| *.= .           |
+|.=X=o            |
++----[SHA256]-----+
+bogon:~ apple$ defaults write com.apple.finder AppleShowAllFiles -bool true
+bogon:~ apple$  -->
+</html>

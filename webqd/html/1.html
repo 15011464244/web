@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <title></title>
+   <meta charset="utf-8">
+   <link rel="stylesheet" type="text/css" href="../css/1.css">
+   <script type="text/javascript">
+   //加载完成的时候才触发
+   		
+
+
+
+
+
+            /*  定时器
+           var time =  setInterval(function(){
+               var a = document.getElementsByTagName("span")[0];
+               a.innerHTML -=1;
+               if (a.innerHTML==0) {
+                  clearInterval(this);
+                  document.getElementById("div").style.display="none";
+               }
+            },1000); 
+            function c(){
+               console.log(1);
+               setTimeout(c,1000);
+            }
+            setTimeout(c,1000);
+            */
+   			// var aa = document.getElementById("last");
+
+            /*  获取元素属性的方法
+            function getStyle(obj,attr){
+                     if(obj.currentStyle){
+                        return obj.currentStyle[attr];
+                  }else{
+                     return getComputedStyle(obj,null)[attr];
+                  }
+               }
+               // console.log(getStyle(aa,"background"));*/
+               /*
+               console.log(window);     //this 的理解
+               console.log(this);*/
+               /*
+               var bb =  document.getElementsByTagName("ul")[0].children;
+               var cc = document.getElementsByTagName("ul")[1].children;
+               console.log(bb);
+               console.log(cc);
+                 for (var i = 0; i < bb.length; i++) { 
+                     bb[i].index=i;
+                    bb[i].onmousemove=function(){
+                      for (var a = 0; a < bb.length; a++) {
+                        bb[a].style.borderBottom="";
+                        cc[a].style.display="none";
+                      }
+                      cc[this.index].style.display="block";
+                      this.style.borderBottom="2px solid red"; 
+                    }
+              }
+              */
+              /*
+              var obj = function(str){
+               this.str = str;
+               that = this;
+               console.log(this);
+               this.shout = function(){
+                  console.log(this);
+                  alert(that.str);
+               }
+               this.shout2 = function(){
+                  console.log(this)
+                  window.setTimeout(function(){
+                     console.log(this);
+                     alert(this.str);
+                 },1000);
+                }
+              }
+              var aa = new obj("123");
+              aa.shout2();*/
+   		// 	var a =document.createElement("input");
+   		// 	var b = document.createElement("button");
+   		// 	var c = document.createElement("span");
+   		// 	c.innerText="c的innerTe"
+   		// 	document.body.appendChild(c);
+   		// 	var d  = document.createElement("span");
+   		// 	d.innerHTML="d的html"
+   		// 	document.body.replaceChild(d,c);
+   		// 	document.body.appendChild(a);
+   		// 	document.body.insertBefore(b,a);
+   		// 	document.body.removeChild(a);	
+   		// 	for (var i = 0; i < 7; i++) {
+   		// 		var input = document.createElement("input");
+   		// 		input.style.background="yellow";
+   		// 		input.setAttribute("type","button");
+   		// 		document.body.appendChild(input);
+   		// 	}
+   			// console.log(aa.innerText);
+   			// console.log(ab.length);
+   			// for (var i = 0; i <ab.length; i++) {
+   			// 	if (ab[i].nodeType==1) {
+   			// 		console.log(ab[i].nodeValue);
+   			// 	}
+   			// }
+   			// console.log();
+   			// var bb =document.firstChild.nextSibling;
+   			// console.log(bb);
+   			// var cc = document.getElementsByClassName("aa");		
+   			// console.log(cc);
+   			// var dd = document.getElementById("fourli");
+   			// console.log(dd);
+   			// dd.onclick=function(){
+   			// 	console.log(this.previousSibling.previousSibling.firstChild.nodeValue);
+   			// }
+            /* 日历
+            var aa = document.getElementsByClassName("ul1")[0].getElementsByTagName("li");
+            var bb = document.getElementsByClassName("ul2")[0].getElementsByTagName("li");
+            for (var i = 0; i < aa.length; i++) {
+               aa[i].index = i;
+               aa[i].onclick=function(){
+                  for (var a = 0; a < aa.length; a++) {
+                      aa[a].style.background="#666";
+                      bb[a].style.display="none";
+                  }
+                  this.style.background="#fff";
+                  bb[this.index].style.display="block";
+
+               }
+            }
+            */
+            /*
+            //星星
+            var aa = document.getElementsByClassName("xingxing")[0].getElementsByTagName("li");
+            var bb = document.getElementsByTagName("span")[0];
+            for (var i = 0; i < aa.length; i++) {
+               aa[i].index = i;
+               aa[i].onclick=function(){
+                   for (var a = 0; a <= this.index; a++) {
+                    aa[a].style.background="green";
+                  }
+                  for (var b = this.index+1; b < aa.length; b++) {
+                    aa[b].style.background="gray";
+                  }
+                  if (this.index<2) {
+                     bb.innerHTML="很差";
+                  }else if(this.index<4&&this.index>=2){
+                     bb.innerHTML="一般";
+                  }else{
+                     bb.innerHTML="good";
+                  }
+               }
+            }*/
+            /*
+            //时钟
+            var s5 = document.getElementsByTagName("span")[5];
+            var s4 = document.getElementsByTagName("span")[4];
+            var s3 = document.getElementsByTagName("span")[3];
+            var s2 = document.getElementsByTagName("span")[2];
+            var s1 = document.getElementsByTagName("span")[1];
+            var s0 = document.getElementsByTagName("span")[0];
+            var button = document.getElementsByTagName("button")[0];
+            var i = 0;
+            var a = 0;
+            var b = 0;
+            var c = 0;
+            var d = 0;
+            var e = 0;
+            var aa =setInterval(function(){
+               console.log(1);
+               if (i==10) {
+                  i=0; 
+                  a++;
+                  if (a==6) {
+                      b++;
+                     if (b==10) {
+                         c++;
+                        if (c==6) {
+                           d++;
+                           if (d==10) {
+                              e++;
+                              s0.innerHTML=e;
+                              d=0;
+                           }
+                           s1.innerHTML=d;
+                           c=0;
+                        } 
+                        s2.innerHTML=c;
+                        b=0;
+                     }
+                     s3.innerHTML=b;
+                     a=0;
+                  }
+                  s4.innerHTML=a;   
+               }
+               s5.innerHTML=i; 
+               i++;
+            },1);
+            button.onclick=function(){
+               clearInterval(aa);
+            }
+            */
+            // setInterval(time,1000);
+            /*
+            function time (){
+               var av = new Date();
+               var hou = av.getHours();
+               var min = av.getMinutes();
+               var scd = av.getSeconds();
+               var aa = [parseInt(hou/10),hou%10,parseInt(min/10),min%10,parseInt(scd/10),scd%10];
+               console.log(aa);
+               var a = document.getElementsByTagName("img");
+               for (var i = 0; i < a.length; i++) {
+                  a[i].src= "img/"+aa[i]+".png";
+                  console.log(a[i].src);
+               }
+            }*/
+            /*
+           var userimg = document.getElementById("userimg");
+           var usersection = document.getElementById("usersection");
+           var ison=true;
+           userimg.onmouseover = function(){
+            setTimeout(function(){
+               usersection.style.display="block";
+            },500);
+           }
+           userimg.onmouseout = function(){
+             setTimeout(function(){
+               if (ison) {
+                  usersection.style.display="none";
+               }
+             },500);
+           }
+           usersection.onmouseover=function(){
+            ison= false;
+            usersection.style.display="display";
+           }
+           usersection.onmouseout=function(){
+            ison=true;
+            usersection.style.display="none";
+           }*/
+           var aa = document.getElementsByTagName("ul")[0];
+           var bb = document.getElementsByTagName("ul")[1].children;;
+           var i = 0;
+            var ab =setInterval(move,2000);
+            function move(){
+              if (i==4) {
+                  aa.style.marginLeft=0;
+                  i=0;
+               }
+               i++;
+               startMove(aa,{"margin-left":i*(-500)});
+               for (var a = 0; a < bb.length; a++) {
+                 bb[a].className="";
+               }
+               bb[i>=4?0:i].className="now";
+           }
+            for (var j = 0; j < bb.length; j++) {
+              bb[j].index = j;
+              bb[j].onclick = function(){
+                clearInterval(ab);
+                startMove(aa,"margin-left":this.index*(-500));
+                for (var k = 0; k < bb.length; k++) {
+                  bb[k].className="";
+                }
+                this.className="now";
+                i = this.index;
+                ab = setInterval(move,2000);
+              }
+            }
+            aa.onclick=function(){
+               clearInterval(ab);
+            }/*
+            var oul=document.getElementsByTagName("ul")[0];
+            var i=1;
+            setInterval(function() {
+              if (i==6) {
+                oul.style.marginLeft=0;
+                i=1;
+              }
+              startMove(oul,{"margin-left":i*(-500)});
+              i++;
+            },2000)*/
+         // function getStyle(obj,attr){
+         //    if(obj.currentStyle){
+         //       return obj.currentStyle[attr];
+         //    }else{
+         //       return getComputedStyle(obj,flase)[attr];
+         //    }
+         // }
+         // function startMove(obj,json,fn){
+         //    obj.timmer=setInterval(function(){
+         //    var iCur= parseInt(getStyle(obj,attr));
+         //    var speed = (json[attr]-iCur)/8;
+         //    speed>0?speed=Math.ceil(speed):speed=Math.floor(speed);
+         //    if (iCur == json[attr]) {
+         //       clearInterval(obj,timmer);
+         //       if(fn){
+         //          fn();
+         //       }
+         //       }else{
+         //          obj.style[attr]=(iCur+speed)+"px";
+         //       }
+         //    },30)
+         }
+   </script>
+</head>
+<body>
+   <!-- <div>
+      <img src="">
+      <img src="">
+      <img src="">
+      <img src="">
+      <img src="">
+      <img src="">
+   </div>
+   <div><span>0</span><span>0</span>时<span>0</span><span>0</span>分<span>0</span><span>0</span>秒</div><button>暂停</button>
+   <ul class="xingxing">
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+   </ul>
+   <span>2342225425</span>
+   <div id="rili">
+      <ul class="ul1">
+         <li>1</li>
+         <li>2</li>
+         <li>3</li>
+         <li>4</li>
+         <li>5</li>
+         <li>6</li>
+         <li>7</li>
+         <li>8</li>
+         <li>9</li>
+         <li>10</li>
+         <li>11</li>
+         <li>12</li>
+      </ul>
+      <ul class="ul2">
+         <li>1</li>
+         <li>2</li>
+         <li>3</li>
+         <li>4</li>
+         <li>5</li>
+         <li>6</li>
+         <li>7</li>
+         <li>8</li>
+         <li>9</li>
+         <li>10</li>
+         <li>11</li>
+         <li>12</li>
+      </ul> 
+
+   </div>-->
+ <!-- 
+	<div>
+		<ul id="last">
+			<li class="aa">1</li> 
+			<li>3</li>
+			<li class="aa">2</li>
+			<li >4</li>
+		</ul>
+      <ul id="box">
+         <li>1</li> 
+         <li>3</li>
+         <li>2</li>
+         <li>4</li>
+      </ul>
+      <div id="div">
+         我是span
+         <span>5</span>
+      </div>
+	</div>
+    -->
+
+    <!-- <div id="qq">
+       <div id="userimg"></div>
+       <div id="usersection"></div>
+    </div> -->
+    <div id="banner">
+       <ul>
+          <li style="background:red;">1</li>
+          <li style="background:green;">2</li>
+          <li style="background:black;">3</li>
+          <li style="background:orange;">4</li>
+          <li style="background:yellow;">5</li>
+          <li style="background:red;">1</li>
+       </ul>
+    </div>
+    <ul id="dot">
+      <li>1</li>
+      <li>2</li>
+      <li>3</li>
+      <li>4</li>
+      <li>5</li>
+    </ul>
+</body>
+<script type="text/javascript" src="../js/1.js">
+</script>
+
+</html>

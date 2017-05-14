@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+</head>
+<body>
+
+</body>
+<script type="text/javascript">
+	function People(name ,age){
+		this.name = name;
+		this.age = age;
+	}
+	function Student(){
+
+	}
+	var p = new People();
+	// Student.prototype.constructor = People;	
+	// console.log(Student.__proto__);
+	// console.log(Student);
+	// console.log(new Student());
+	// console.log(new People().__proto__);
+	// console.log(new People().constructor);
+	// console.log(new People());
+	var obj ={
+		name:"",
+		age :""
+	}
+	// console.log(obj);
+	var person ={};
+	Object.defineProperty(person,"name",{
+		configurable:false,//是否可以删除
+		writable:false,//是否可以更改
+		value:"fadfa"
+	});
+	person.name="after";
+	delete person.name;
+	console.log(person.name);
+	var aa = {
+		get age(){
+			if (this._age>18) {
+				return this._age;
+			}else{
+				return "aaa";
+			}
+			
+		},
+		set age(val){
+			this._age = val;
+		}	
+	}
+	aa.age=17;
+	// console.log(aa.age);
+	var obj ={};
+	Object.defineProperties(person,{
+		name:{},age:{}
+	});
+	var obj = {
+		a:"aa",
+		b:"bb"
+	}
+	obj.hasOwnProperty("a");
+
+	
+</script>
+</html>

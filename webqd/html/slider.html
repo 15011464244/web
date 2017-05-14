@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+</head>
+<style type="text/css">
+	*{padding: 0;margin: 0;list-style: none;}
+	#carousel{width: 600px;height: 300px;margin: 100px auto;overflow: hidden;position: relative;}
+	#carousel ul{width: 600px;height: 300px;position: relative;}
+	#carousel ul li{width: 600px;height: 300px;position: absolute;top: 0;left: 600px}
+	#carousel ul li img{width: 600px;height: 300px;}
+	#carousel ul li.first{left: 0}
+	span{width: 30px; height: 30px;position: absolute;top: 50%;margin-top: -15px;background: yellowgreen;z-index: 999;line-height: 30px;text-align: center;}
+	.leftbtn{left: 10px}
+	.rightbtn{right: 10px}
+</style>
+<body>
+	<div id="carousel">
+		<span class="leftbtn"><<</span><span class="rightbtn">>></span>
+		<ul>
+			<li class="first"><a href=""><img src="../img/0.jpg"></a></li>
+			<li><a href=""><img src="../img/1.jpg"></a></li>
+			<li><a href=""><img src="../img/2.jpg"></a></li>
+			<li><a href=""><img src="../img/3.jpg"></a></li>
+		</ul>
+	</div>
+</body>
+	<script type="text/javascript" src="../js/slider1.js"></script>
+	<script type="text/javascript">
+		var slider = new Slider({
+			"ID": "carousel",
+			"interval":20,
+		});
+	</script>
+</html>

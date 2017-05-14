@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<div style="background:red;height:100px;width:100px;position:absolute;"></div>
+	<div style="background:green;height:100px;width:100px;position:absolute; margin-left:50px;"></div>	
+	<div style="background:yellow ;height:100px;width:100px;position:absolute; margin-left:100px;"></div>
+	<!-- <div></div> -->
+</body>
+<script type="text/javascript" src="../jquery-3.2.1.js"></script>
+<script type="text/javascript">
+	var div = $('div');
+	console.log(div);
+	// div.animate({height:"300px"},"slow");
+	// div.css({"background":"green","height":"100px","width":"100px"});
+	// div.css("background","red");
+	div.mouseenter(function(){
+		$(this).css("background","yellow");
+
+	})
+	div.mouseleave(function(){
+		$(this).css("background","green");
+	})
+	div.click(function(){
+		$(this).animate({"left":"500px","top":100},100000,function(){});
+		// div.animate({"top":1000,"marginLeft":1000},"1000");
+	})
+	$("div:eq(0)").click(function(){alert("afafaf")});
+	$("div:last").click(function(){alert("last")});
+
+</script>
+</html>

@@ -1,0 +1,7 @@
+*{margin: 0,padding:0;list-style: none;}
+li{float: left;}
+#outer{width: 800px;height: 360px;}
+#banner{width: 4000px;height: 360px;}
+#banner li{width: 800px;height: 360px;}
+#btn{position: absolute;top: 320px;left: 300px;width: 100px;tr}
+

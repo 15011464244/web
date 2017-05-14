@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		/*div{width: 20px;height: 20px;position: absolute;background: yellow;}*/
+		div{width: 30px;height: 30px; border-radius: 50%;background: red;position: absolute;}
+	</style>
+</head>
+<body>
+	<input type="button" name="" value="开始" onclick="start()">
+	<div></div>
+<!-- 	<div></div>
+	<div></div>
+	<div></div>
+	<div></div>
+
+	<div></div>
+	<div></div>
+	<div></div>
+	<div></div>
+	<div></div>
+
+	<div></div>
+	<div></div>
+	<div></div>
+	<div></div>
+	<div></div>
+
+	<div></div>
+	<div></div>
+	<div></div>
+	<div></div>
+	<div></div> -->
+
+</body>
+	<script type="text/javascript">
+	/*
+		document.onmousemove =function(){
+			var e =event||arguments[0];
+			var list = document.getElementsByTagName("div");
+			console.log(list[0]);
+			var num = 0;
+			var timer =setInterval(function(){
+				if (num==list.length) {
+					clearInterval(timer);
+				}else{
+					list[num].style.left = e.clientX+"px";
+					list[num].style.top =e.clientY+"px";
+					num++;
+				}
+			},20);
+		}*/
+		function start(){
+			var list = document.getElementsByTagName("div")[0];
+			var speedY = 10;
+			var speedX = 10;
+			setInterval(function(){
+				// speedY+=3;
+				var t = list.offsetTop +speedY;
+				var l = list.offsetLeft +speedX;
+				if (l>document.documentElement.clientWidth-list.offsetWidth) {
+					speedX*=-1;
+					l=document.documentElement.clientWidth-list.offsetWidth;
+				}else if(l<=0){
+					speedX*=-1;
+					l=0;
+				}
+				if (t>document.documentElement.clientHeight-list.offsetHeight) {
+					// speedX*=0.8;
+					speedY*=-1;
+					console.log("speedY"+speedY);
+					t = document.documentElement.clientHeight-list.offsetHeight;
+				}else if(t<=0){
+					speedY*=-1;
+					t=0;
+				}
+				list.style.top = t+"px";
+				list.style.left = l+"px";
+			},20);
+		}
+	</script>
+</html>

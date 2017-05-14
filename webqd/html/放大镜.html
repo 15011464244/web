@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+
+</head>
+<style type="text/css">
+	*{padding: 0px;margin: 0px;}
+	#small{width: 195px;height: 250px;background: url(../img/img_01.png) no-repeat center;margin-left: 100px;margin-top: 100px;}
+	#big{width: 200px;height: 200px;background: url(../img/img_02.png) no-repeat 0 0;}
+	#faj{width: 30px;height: 30px; opacity: 0.3;background: gray;position: absolute;}
+</style>
+<body>
+	<div id="small" style="width:195px;">
+		<div id="faj"></div>
+	</div>
+	<div id="big">
+		
+	</div>
+</body>	
+<script type="text/javascript">
+	
+	var faj = document.getElementById("faj");
+	var small = document.getElementById("small");
+	var big = document.getElementById("big");
+	var x = 0;
+	var y = 0;
+	small.onmousemove=function(){
+		var e = event||arguments[0];
+		console.log("clientX"+e.clientX);
+		console.log("clientY"+e.clientY);
+		if ((e.clientX-faj.offsetWidth/2)<100) {
+			x = 100;
+		}else if((e.clientX-faj.offsetWidth/2)>265){
+			x = 265;
+		}else{
+			x= e.clientX-faj.offsetWidth/2;
+		}
+
+
+		if ((e.clientY - faj.offsetHeight/2)<100) {
+			y = "100";
+		}else if((e.clientY-faj.offsetHeight/2)>320){
+			y = "320";
+		}else{
+			y = e.clientY - faj.offsetHeight/2;
+		}
+		faj.style.left = x+"px";
+		faj.style.top  = y+"px";
+		console.log(x-small.offsetLeft);
+		big.style.backgroundPosition = -(x-small.offsetLeft)*2+"px"+" "+-(y-small.offsetTop)*2 +"px";
+		
+	}
+</script>
+</html>

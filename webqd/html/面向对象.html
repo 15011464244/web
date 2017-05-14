@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>
+		
+	</title>
+	<meta charset="utf-8">
+</head>
+<style type="text/css">
+	div{width: 64px; height: 128px; background:url(../img/run.png) no-repeat;position: absolute;}
+</style>
+<body>
+<input type="button" name="" id="button" value="停止">
+<div id="dom"></div>
+</body>
+<script type="text/javascript">
+     var nextFoot =1;
+	function Png(left,top,position,dom){
+		//bc背景图片
+		console.log(window.innerWidth);
+		this.left = left;
+		this.right = window.innerWidth -left;
+		this.top = top;
+		this.bottom = window.innerHeight -top;
+		var bc;
+		// this.dom = document.createElement("div");
+		this.dom = dom;
+		if (position==1) {
+			bc =-256;
+			this.dom.style.left =left+"px";
+			this.dom.style.top = top+"px";
+		}else if(position == 2){
+			bc = -128;
+			this.dom.style.right = this.right+"px";
+			this.dom.style.top = top+"px";
+		}else if(position == 3){
+			bc = 0;
+			this.dom.style.left =left+"px";
+			this.dom.style.top = top+"px";
+		}else if(position == 4){
+			bc = -384;
+			this.dom.style.left =left+"px";
+			this.dom.style.bottom = this.bottom+"px";
+		}
+		this.dom.style.backgroundPosition="0 "+bc+"px";
+		this.foot = 1;
+		var that = this;
+		this.start =function(){
+			this.timer =setInterval(function(){
+				that.foot++;
+				if (that.foot==7) {
+					that.foot =0;
+				}
+				if (position==1) { //向右走	
+					that.left+=2;
+					that.dom.style.left = that.left+"px";	
+				}else if(position ==2){	//向左走
+					that.right+=2;
+					that.dom.style.left =window.innerWidth- that.right+"px";
+
+				}else if(position == 3){//向下走
+					that.top+=2;
+					that.dom.style.top = that.top+"px";
+				}else if(position == 4){//向上走
+
+					that.bottom+=2;
+					console.log(that.bottom);
+					that.dom.style.top = window.innerHeight-that.bottom+"px";
+
+				}else{
+					console.log("aa");
+				}
+				that.dom.style.backgroundPosition=-64*that.foot+"px  "+bc+"px";
+			},1000);
+		}
+		this.nextfoot = function(){
+				nextFoot++;
+				console.log(nextFoot);
+				if (nextFoot==7) {
+					nextFoot =0;
+				}
+			if (position==1) { //向右走	
+					that.left+=4;
+					that.dom.style.left = that.left+"px";	
+				}else if(position ==2){	//向左走
+					that.right+=4;
+					that.dom.style.left =window.innerWidth- that.right+"px";
+
+				}else if(position == 3){//向下走
+					that.top+=4;
+					that.dom.style.top = that.top+"px";
+				}else if(position == 4){//向上走
+
+					that.bottom+=4;
+					// console.log(that.bottom);
+					that.dom.style.top = window.innerHeight-that.bottom+"px";
+
+				}else{
+					console.log("aa");
+				}
+				that.dom.style.backgroundPosition=-64*nextFoot+"px  "+bc+"px";
+		}
+		this.stop =function(){
+				clearInterval(this.timer);
+				// document.body.removeChild(this.dom);		
+		}	
+	}
+	var dom = document.getElementById("dom");
+	var aa = new Png(100,100,1,dom);
+	aa.start();
+	document.onkeydown = function(){
+		var e = event||arguments[0];
+		if (e.keyCode == 37) {
+			aa.stop();
+			aa = new Png(dom.offsetLeft,dom.offsetTop,2,dom);
+			aa.nextfoot();
+		}else if(e.keyCode == 38){
+			aa.stop();
+		   aa = new Png(dom.offsetLeft,dom.offsetTop,4,dom);
+		   aa.nextfoot();
+		}else if(e.keyCode == 39){
+			aa.stop();
+			aa = new Png(dom.offsetLeft,dom.offsetTop,1,dom);
+			aa.nextfoot();
+		}else if(e.keyCode == 40){
+			aa.stop();
+			aa = new Png(dom.offsetLeft,dom.offsetTop,3,dom);
+			aa.nextfoot();
+		}
+	}
+	// var  aa  = new Png(100,100,4);
+	// aa.start();
+	// setInterval(function(){
+	// 	new Png(Math.random()*400,Math.random()*400,-256);
+	// },100);
+	// var bb = new Png(100,300);
+	// bb.start();
+	// var oaa = {
+	// 	"function":"h1",
+	// 	"func tion":"avc",
+	// 	"abc":function(){
+	// 		// alert(this["func tion"]);
+	// 		alert(this[0]);
+	// 	},
+	// 	"aaa":obj,
+	// 	0:123
+	// }
+	// var obj = {
+	// 	age:0,
+	// 	sex:"男",
+	// 	"name":"bb",
+	// 	aa:function(){
+	// 		obj.age++;
+	// 		console.log(obj.age);
+	// 	}
+	// }
+	// oaa.abc();
+	// obj.aa =setTimeout(function(){
+	// 	alert("aa");
+	// },11);
+	// obj.aa=oaa.abc;
+	
+	// console.log(obj);
+	// console.log(oaa);
+	// console.log(obj.aa)
+	// console.log(oaa.abc);
+	// console.log(obj.sex);
+	// console.log(typeof obj);
+	
+
+	// console.log(oaa["function"]);
+	// console.log(oaa["abc"]);
+	// console.log(obj["na"+"me"]);
+	// console.log(oaa.aaa);
+	// console.log(obj.name);
+	// var  aa=[];
+	// aa["afafa"] = "aafsd";
+	// aa.a = 5;
+	// aa[0]=3;
+	// console.log(aa);
+	// console.log(oaa.aaa.age);
+
+
+	// var haha = new Object();	
+	// haha.name = 11;
+	// haha["afaf"] = 232;
+	// haha[0] = 123;
+	// haha["0"]=234;
+	// console.log(haha);
+	// console.log(haha[0]);
+
+	// console.log(aa);
+	// console.log(aa[0]);
+	// console.log(oaa);
+	// document.onkeydown =function(){
+	// 	console.log("fasfasfasfaf");
+	// 	var e = event||arguments[0];
+	// 	if(e.keyCode==37){
+	// 		console.log("37");
+	// 	}else if(e.keyCode ==38){
+	// 		console.log("38")
+	// 	}else if(e.keyCode == 39){
+	// 		console.log("39")
+	// 	}else{
+	// 		console.log("40");
+	// 	}
+
+	// }
+	// console.log(oaa.abc);
+	// oaa.abc();
+
+	// var box = document.getElementById("box");
+	// box.onclick = function(){
+	// 	// alert(this);
+	// 	console.log(this);
+	// }
+	// var obj = {
+	// 	aa: function(){
+	// 		console.log(this);
+	// 	},
+	// }
+	// // aa.apply(obj);
+	// function aa(a){
+	// 	for (var i = 0; i < a; i++) {
+	// 		console.log("aa");
+	// 	}
+	// 	console.log(a);
+	// }
+	// var hehe={}
+	// // obj.aa();
+	// // aa.call(obj);
+	// aa.apply(hehe,[2,3]);
+	// aa.call(obj,[2,3]);
+	// console.log(obj);
+	// function Abc(name,age){
+	// 	this.name = name;
+	// 	this.age = age;
+
+	// }
+	// var aa = new Abc("aa",4);
+	// console.log(aa);
+	// aa.a = "3";
+	// console.log(aa.a);
+	// console.log(aa);
+	// var bb = new Abc("a","b");
+	// console.log(bb);
+	// console.log(aa instanceof Abc);
+	// class Aaa{
+	
+	// }
+	// var ac =new Aaa("ab");
+	// ac.aa = 2;
+	// console.log(ac.aa);
+	// console.log(typeof aa);
+	// var a =[];
+	// console.log(typeof a);
+	// console.log(cc);
+</script>
+</html>

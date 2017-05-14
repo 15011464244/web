@@ -1,0 +1,637 @@
+*{padding: 0;margin: 0;}
+a{text-decoration: none;}
+li{
+	list-style-type: none;
+}
+body{
+	height: 3150px;
+	width: 1583px;
+}
+header {
+	height: 80px;
+	box-shadow: 0px 1px 4px gray;
+}
+header .col1{
+	height: 60px;
+	padding-top: 20px;
+	margin-left: 200px;
+}
+header #logo{
+	float: left;
+	width: 149px;
+	height: 44px;
+	background: url(../img/tencent_01.png) no-repeat center;
+}
+header span{
+	float: right;
+	line-height: 40px;
+	height: 30px;
+	font-size: 15px;
+	border-left: 1px solid gray;
+	padding-left: 20px;
+	color: gray;
+	margin-right: 68px;
+	margin-top: 5px;
+}
+.col1,.col2,.col3{
+	float: left;
+}
+.col1{
+	width: 367px;
+	height: 44px;
+}
+.col2{
+	overflow: hidden;
+	width: 736px;
+}
+.col2 li{
+	float: left;
+	height: 80px;
+	list-style-type: none;
+	background:url(../img/nav.png) no-repeat ;
+}
+.col2 #l1{
+	width: 100px;
+}
+.col2 #l2{
+	width: 122px;
+	background-position:-100px 0px;
+}
+.col2 #l3{
+	width: 148px;
+	background-position:-222px 0px;
+}
+.col2 #l4{
+	width: 122px;
+	background-position:-370px 0px;
+}
+.col2 #l5{
+	width: 122px;
+	background-position:-492px 0px;
+}
+.col2 #l6{
+	width: 122px;
+	background-position:-614px 0px;
+}
+.col2 #l1:hover {
+	background: url(../img/nav-on.png) no-repeat 0px 0px;
+}
+.col2 #l2:hover {
+	background: url(../img/nav-on.png) no-repeat -100px 0px;
+}
+.col2 #l3:hover {
+	background: url(../img/nav-on.png) no-repeat -222px 0px;
+}
+.col2 #l4:hover {
+	background: url(../img/nav-on.png) no-repeat -370px 0px;
+}
+.col2 #l5:hover {
+	background: url(../img/nav-on.png) no-repeat -492px 0px;
+}
+.col2 #l6:hover {
+	background: url(../img/nav-on.png) no-repeat -614px 0px;
+}
+.col3 {
+	padding: 16px 0px 16px 80px;
+}
+.col3 i{
+	display: block;
+	width: 40px;
+	height: 40px;
+	padding-right: 30px;
+	border-right: 1px solid gray;
+	background: url(../img/serch_04.png) no-repeat center; 
+	margin-right: 20px;
+	float: left;
+	margin-top: 8px;
+}
+.col3 img{
+	width: 35px;
+	height: 35px;
+}
+.col3 div{
+	float: left;
+	margin-bottom: 16px;
+}
+.col3 a{
+	display: block;
+	font-size: 13px;
+	line-height: 13px;
+	text-align: center;
+	color: gray;
+}
+.nav{
+	background: url(../img/tencent_05.png) no-repeat 0px 5px;
+	margin: auto;
+	width: 1308px;
+	height: 594px;
+}
+.article{
+	width: 100%;
+	height: 2074px;
+	background: rgb(214,217,225);
+	padding-top: 20px;
+}
+.aBox{
+	width:  1196px;
+	margin: auto;
+}
+.aCol1{
+	width: 782px;
+	float: left;
+}
+.aBox .aCol1 .rmkc{
+	height: 354px;
+	background: rgb(242,241,239);
+}
+.rmkc .aTitle{
+	height: 20px;
+	padding-top:20px;
+	padding-bottom: 20px;
+}
+.rmkc .aTitle i{
+	float: left;
+	width: 26px;
+	height: 26px;
+	background: url(../img/icon-lesson.png) no-repeat center;
+	margin-left: 26px;
+	margin-right: 10px;
+}
+.rmkc .aTitle #sRmkc{
+	font-size: 20px;
+	line-height: 20px;
+	float: left;
+	margin-top: 3px;
+	
+}
+.rmkc .aTitle #sMore{
+	font-size: 10px;
+	color: gray;
+	float: right;
+	margin-top: 3px;
+	padding-right: 20px;
+}
+.rmkc .aUl li{
+	list-style-type: none;
+	float: left;
+	height: 275px;
+	width: 225px;
+	margin-left: 20px;
+	background: #fff;
+
+}
+.rmkc .aUl .aLi1 i{
+	display: block;
+	width: 225px;
+	height: 160px;
+	background: url(../img/1452663224623.jpg) no-repeat center;
+	/*border-bottom: 3px solid rgb(0,192,236);*/
+}
+.rmkc .aUl .aLi1 hr{
+	margin-top: 2px;
+	background: rgb(0,192,236);
+	color: rgb(0,192,236);
+	height: 5px;
+	width: 100%;
+}
+.rmkc .aUl .aLi1 .aSpan1{
+	font-size: 14px;
+	line-height: 30px;
+}
+.rmkc .aUl .aLi1 .aSpan2{
+	color: gray;
+	font-size: 14px;
+	line-height: 24px;
+}
+.rmkc .aUl .aLi1 p{
+	margin-top: 5px;
+	margin-left: 10px;
+	margin-right: 20px;
+}
+.ghfx {
+	width: 782px;
+	height: 500px;
+	background: rgb(242,241,241);
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+.ghfx .aTitle{
+	height: 20px;
+	padding-top:20px;
+	padding-bottom: 20px;
+}
+.ghfx .aTitle i{
+	float: left;
+	width: 26px;
+	height: 26px;
+	background: url(../img/icon-lesson.png) no-repeat center;
+	margin-left: 26px;
+	margin-right: 10px;
+}
+.ghfx .aTitle #sRmkc{
+	font-size: 20px;
+	line-height: 20px;
+	float: left;
+	margin-top: 3px;
+	
+}
+.ghfx .aTitle #sMore{
+	font-size: 10px;
+	color: gray;
+	float: right;
+	margin-top: 3px;
+	padding-right: 20px;
+}
+.ghfx .aUl .aLi1{
+	background: #fff;
+	width: 742px;
+	height: 128px;
+	margin-left: 20px;
+	margin-bottom: 20px;
+}
+.ghfx .aUl .aLi1 a{
+	margin-left: 20px;
+	margin-top: 20px;
+	float: left;
+}
+.ghfx .aUl .aLi1 a img{
+	width: 122px;
+	height: 87px;
+	/*background: url(../img/1470986734979.jpg) no-repeat center;*/
+	/*float: left;*/
+}
+.ghfx .aUl .aDiv{
+	float: left;
+	margin-top: 20px;
+	margin-left: 20px;
+}
+.ghfx .aUl .aDiv h2{
+	font-size: 18px;
+	margin-bottom: 10px;
+	line-height: 20px;
+}
+.ghfx .aUl .aDiv div{
+	overflow: hidden;
+	margin-bottom: 10px;
+}
+.ghfx .aUl .aDiv div i{
+	width: 13px;
+	height: 13px;
+	background: url(../img/tencent_04.png) no-repeat center;
+	float: left;
+}
+.ghfx .aUl .aDiv div time{
+	font-size: 13px;
+	line-height: 13px;
+	color: gray;
+	float: left;
+	margin-left: 6px;
+}
+.ghfx .aUl .aDiv div p{
+	font-size: 15px;
+	line-height: 22px;
+}
+.jpkc{
+	width: 782px;
+	height: 805px;
+	background: rgb(242,241,239);
+	margin-top: 20px;
+}
+
+.jpkc .aTitle{
+	height: 20px;
+	padding-top:20px;
+	padding-bottom: 10px;
+}
+.jpkc .aTitle i{
+	float: left;
+	width: 26px;
+	height: 26px;
+	background: url(../img/icon-lesson.png) no-repeat center;
+	margin-left: 26px;
+	margin-right: 10px;
+}
+.jpkc .aTitle #sRmkc{
+	font-size: 20px;
+	line-height: 20px;
+	float: left;
+	margin-top: 3px;
+	
+}
+.jpkc .aTitle #sMore{
+	font-size: 10px;
+	color: gray;
+	float: right;
+	margin-top: 3px;
+	padding-right: 20px;
+}
+.jpkc .aLi1{
+	width: 352px;
+	height: 368px;
+	margin-right: 10px;
+	margin-left: 20px;
+	float: left;
+	margin-bottom:10px; 
+}
+.jpkc .aLi1 .aTitle{
+	overflow: hidden;
+	padding-top:1px;
+	padding-bottom: 20px;
+}
+.jpkc .aLi1 .aTitle #aSpan1{
+	font-size: 18px;
+	padding-left: 24px;
+	padding-top: 3px;
+	float: left;
+	margin-top: 0px;
+	width: 300px;
+	height: 25px;
+	background: url(../img/bout-title-bg.png) no-repeat  0px 5px;
+}
+.jpkc .aLi1 .aTitle #aSpan2{
+	font-size: 12px;
+	color: gray;
+	float: right;
+	padding-top: 15px;
+}
+.jpkc .aLi1 img{
+	height:160px;
+	width:350px;
+	font-size: 15px;
+	line-height: 24px;
+}
+.jpkc .aLi1 article{
+	margin-top: 18px;
+	
+}
+.jpkc .aLi1 p{
+	color: gray;
+}
+.jpkc .aLi1 ul li{
+	float: left;
+	line-height: 30px;
+}
+.jpkc .aLi1 ul li i{
+	float: left;
+	width: 15px;
+	height: 15px;
+	background: url(../img/tencent_07.png) no-repeat center;
+	margin-top: 5px;
+}
+.jpkc .aLi1 ul li span{
+	float: left;
+}
+.aCol2{
+	width: 270px;
+	height: 2074px;
+	float: left;
+	margin-left: 20px;
+	background: #fff;
+}
+.aCol2 .aTitle {
+	height: 25px;
+	margin-top: 20px;
+	margin-left: 20px;
+	margin-bottom: 20px;
+}
+.aCol2 .aTitle i{
+	float: left;
+	width: 22px;
+	height: 22px;
+	background: url(../img/icon-rank.png) no-repeat center;
+}
+.aCol2 .aTitle span{
+	float: left;
+	font-size: 21px;
+	line-height: 21px;
+	margin-left: 10px;
+	font-weight: 100;
+}
+.aCol2 .aSecond{
+	height: 33px;
+	background: url(../img/rank-tab-gray-bg.png) no-repeat 0px 0px;
+	width: 225px;
+	margin-left: 20px;
+}
+.aCol2 .aSecond #aSpan1{
+	float: left;
+	padding: 8px 27px ;
+	border: 1px solid gray;
+	border-bottom: 0px;
+	width: 56px;
+	height: 14px;
+	font-size: 14px;
+	margin-left: 2px;
+	color: black;
+}
+.aCol2 .aSecond #aSpan2{
+	float: left;
+	padding: 8px 27px;
+	border-bottom: 1px solid gray;
+	width: 56px;
+	height: 14px;
+	font-size: 14px;
+	color: gray;
+}
+.aCol2 .aPicture{
+	width: 226px;
+	height: 880px;
+	margin-left: 20px;
+	margin-top: 20px;
+	overflow: hidden;
+}
+.aCol2 .aLi1 div{
+	height: 26px;
+	width: 226px;
+	background: rgb(100,92,85);
+	opacity: 0.8;
+	position: relative;
+	bottom: 26px;
+}
+.aCol2 .aLi1{
+	width: 226px;
+	height: 160px;
+	margin-bottom: 20px;
+}
+.aCol2 .aLi1 div i{
+	float: left;
+	width: 26px;
+	height: 26px;
+	background: rgb(236,41,38);
+	text-align: center;
+	color: white;
+	line-height: 26px;
+}
+.aCol2 .aLi1 div span{
+	float: left;
+	font-size: 13px;
+	height: 14px;
+	line-height: 26px;
+	color: white;
+	font-weight: 100;
+	margin-left: 5px;
+}
+
+.aCol2 .aLiPicture {
+	display: block;
+	width: 226px;
+	height: 162px;
+	background: url(../img/we_xys.jpg) no-repeat center;
+}
+.aCol2 .aFont{
+	width: 226px;
+	height: 140px;
+	margin-left: 20px;
+	padding-bottom: 20px;
+	margin-top: 20px;
+}
+.aCol2 hr{
+	color: gray;
+}
+.aCol2 .aImage{
+	width: 226px;
+	height: 160px;
+	background: url(../img/1437012075279.png) no-repeat center;
+	margin:auto;
+	margin-top: 30px;
+}
+.aCol2 .aFont li{
+	margin-top: 0px;
+	height: 20px;
+	width: 226px;
+	overflow: hidden;
+	margin-bottom: 10px;
+}
+.aCol2 .aFont li i{
+	float: left;
+	width: 20px;
+	height: 20px;
+	background: url(../img/icon-rank-item.png);
+	color: white;
+	line-height: 20px;
+	text-align: center;
+	margin-left: 0px;
+}
+.aCol2 .aFont li span{
+	float: left;
+	font-size: 14px;
+	line-height: 20px;
+	margin-left: 10px;
+}
+.aCol2 .aImage{
+	background: url(../img/1437012075279.png) no-repeat center;
+	width: 226px;
+	height: 160px;
+	margin: auto;
+	display: block;
+	margin-top: 30px;
+}
+.aCol2 article{
+	margin-top: 16px;
+}
+.aCol2 article h3{
+	margin: auto;
+	margin-left: 20px;
+	margin-bottom: 16px;
+}
+.aCol2 article p{
+	margin-left: 20px;
+	margin-right: 20px;
+	margin-bottom: 25px;
+}
+.aCol2 .aContact {
+	margin: 13px 0px 0px 20px;
+}
+.aCol2 .aContact{
+	margin-bottom: 20px;
+	overflow: hidden;
+}
+.aCol2 .aContact i{
+	width: 24px;
+	height: 24px;
+	background: url(../img/tencent_02.png) no-repeat center;	
+	float: left;
+}
+.aCol2 .aContact span{
+	margin-left: 10px;
+	font-size: 20px;
+	line-height: 20px;
+	float: left;
+	margin-top: 3px;
+}
+.aCol2  .aHezuo{
+	font-size: 12px;
+	margin-left: 20px;
+	line-height: 24px;
+}
+.aCol2 .aDiv{
+	width: 200px;
+	height: 120px;
+	background: gray;
+	margin: auto;
+}
+.aCol2  .aEnter{
+	width: 157px;
+	height: 90px;
+	margin: 10px 20px 24px 20px;
+	font-size: 36px;
+}
+.aCol2 .aEnter input{
+	width: 158px;
+	height: 46px;
+	color: white;
+	font-size: 17px;
+	text-align: center;
+	background: rgb(51,51,51);
+	border:0px;
+}
+
+.aCol3{
+	background: url(../img/tencent_03.png) no-repeat left top;
+	width: 120px;
+	height: 2074px;
+	float: right;
+	margin-right: 0px;
+
+}
+.hrColor hr{
+	height: 5px;
+}
+
+.hrColor #hr1{
+	width: 20%;
+	color: green;
+	float: left;
+	background: green;
+}
+.hrColor #hr2{
+	width: 20%;
+	color: blue;
+	float: left;
+	background: blue;
+}
+.hrColor #hr3{
+	width: 20%;
+	color: orange;
+	float: left;
+	background: orange;
+}
+.hrColor #hr4{
+	width: 20%;
+	color: red;
+	float: left;
+	background: red;
+}
+.hrColor #hr5{
+	width: 20%;
+	color: yellow;
+	float: left;
+	background: yellow;
+}
+.footer {
+	width: 100%;
+	height: 360px;
+	background: rgb(246,246,246) url(../img/tencent_06.png) no-repeat center;
+	margin: auto;
+}
+

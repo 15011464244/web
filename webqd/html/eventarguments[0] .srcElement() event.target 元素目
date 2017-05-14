@@ -1,0 +1,3 @@
+event||arguments[0] .srcElement() event.target 元素目标对象event.srcElement||event.targent
+src.nodeName
+document.body.scrollTop querySelectorAll("div") e.stoppropagation. e.cancelBubble=true;

@@ -1,0 +1,216 @@
+*{margin: 0px;padding: 0px;}
+li{
+	list-style-type: none;
+}
+a{
+	text-decoration: none;
+	color: rgb(105,105,105);
+}
+header{
+	background:rgb(208,208,208);
+	width: 100%;
+	height: 36px;
+}
+.coner{
+	width: 1000px;
+	margin: auto;
+	font-size: 15px;
+}
+header .h1 ul li{
+	float: left;
+	line-height: 36px;
+	margin-right: 10px;
+	margin-left: 10px;
+}
+header .h1 ul li a:hover{
+	opacity: 0.7;
+}
+header .h1{
+	float: left;
+}
+header .h2{
+	float: right;
+}
+header .h2 ul li{
+	float: left;
+	line-height: 36px;
+	margin-right: 10px;
+	margin-left: 10px;
+}
+header .h2 ul{
+	float: left;
+}
+header .h2 input{
+	float: right;
+	line-height: 36px;
+	width: 140px;
+	height: 20px;
+	border-color: rgb(208,208,208);
+	border:1px;
+	border-style: solid;
+	margin-left: 13px;
+	margin-top: 10px;
+	margin-right:40px;
+	padding-left: 10px;
+	color: rgb(208,208,208);
+}
+header .h2 input:hover {
+	border-color: rgb(0,0,0);
+	color: rgb(0,0,0);
+}
+.second{
+	background: rgb(255,255,255);
+	height: 100px;
+	width: 100%;
+}
+.second #s1{
+	float: left;
+	margin-top: 25px;
+	margin-left: 10px;
+}
+.second #s2{
+	float: right;
+	margin-right: 30px;
+	margin-bottom: 10px;
+}
+.title{
+	height: 44px;
+	width: 100%;
+	background: rgb(226,43,56);
+}
+.title .coner{
+	background: rgb(208,19,36);
+	height: 44px;
+}
+.title ul{
+	height: 44px;
+}
+.title ul li{
+	float: left;
+	width: 100px;
+	line-height: 44px;
+	text-align: center;
+}
+.title ul li a{
+	color: rgb(255,255,255);
+	font-weight: 100;
+	font-size: 16px;
+}
+.tltle ul li{
+	opacity: 0.7
+}
+.title ul li:hover div{
+	display: block;
+}
+.title ul li div{
+	width: 1000px;
+	height: 100px;
+	background: green;
+	position: relative;
+	right: 100px;
+	bottom: 0.5px;
+	display: none;
+}
+.banner {
+	background: rgb(230,230,230);
+}
+.banner .coner{
+	background: url(../img/xueyuan_07.png);
+	height: 377px;
+}
+article .coner{
+	margin-top:53px;
+}
+.firstColRow1 #aa{
+	width:267px;
+}
+.firstColRow1 #aa<img{
+	width:267px;
+	height:135px;
+}
+.firstColRow1 hr{
+	margin-top:10px;
+	margin-bottom:20px;
+}
+.firstColRow1 #aa ul{
+	overflow:hidden;
+}
+.firstColRow1 ul li{
+	float: left;
+	font-size:18px;
+	margin-right:24px;
+}
+.firstColRow2 #cc{
+	width:267px;
+	margin-top:35px;
+}
+.firstColRow2 hr{
+	margin-top:10px;
+	margin-bottom:20px;
+}
+.firstColRow2 #cc ul{
+	overflow:hidden;
+}
+.firstColRow2 ul li{
+	float: left;
+	font-size:17px;
+	margin-right:20px;
+}
+.secondColRow1 #aa{
+	width:420px;
+}
+.secondColRow1 hr{
+	margin-top:10px;
+	margin-bottom:20px;
+}
+.secondColRow1 #aa div{
+	overflow:hidden;
+}
+#abc{
+	float:right;
+}
+.secondColRow1 .a1{
+	overflow:hidden;
+	background:green;
+}
+.secondColRow1 .a1 #abc{
+	background:yellow;
+}
+.secondColRow1 ul{
+	float:left;
+}
+.secondColRow1 ul li{
+	float: left;
+	font-size:18px;
+	margin-right:20px;
+}
+.secondColRow2 #cc{
+	width:420px;
+	margin-top:35px;
+}
+.secondColRow2 hr{
+	margin-top:10px;
+	margin-bottom:20px;
+}
+.secondColRow2 #cc ul{
+	overflow:hidden;
+}
+.secondColRow2 ul li{
+	float: left;
+	font-size:17px;
+	margin-right:20px;
+}
+
+.firstCol,.secondCol,.thirdCol{
+	float:left;
+	overflow:hidden;
+	background:red;
+}
+.secondCol{
+	margin-left:40px;
+	margin-right:30px;
+}
+
+
+
+

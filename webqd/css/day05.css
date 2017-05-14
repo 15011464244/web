@@ -1,0 +1,30 @@
+/*
+#a{width: 300px;height: 30px;background: -webkit-radial-gradient(60% 55%,closest-cornerrrrr8,blue ,red,yellow,black );} 
+#b{font-family:"微软雅黑" ;font-size:30px;line-height: 400px; font-weight: bold;font-style: italic; width: 600px;text-align: right;background: red;}
+/*#c{font:italic 30px/40px bold "微软雅黑"；}
+*/@font-face{
+	src:url(1.tt);
+	font-family: afdfaf;
+}*/
+#c{white-space: nowrap; text-overflow: ellipsis;font-size: 20px; overflow: hidden; width: 600px;height: 200px; background: yellow;
+ text-decoration: underline; text-indent: 20px;}
+#e{white-space: nowrap;  width: 400px;height: 500px;background: yellow;overflow: hidden;text-overflow: ellipsis;}
+
+.aa #cc{
+	width: 400px;
+	height: 300px;
+	background: red;
+	color: orange;
+}
+.bb #cc{
+	width: 200px;
+	height: 500px;
+	background: green;
+	color: red;
+}
+#cc{
+	width: 600px;
+	height: 200px;
+	background: orange;
+	color: green;
+}

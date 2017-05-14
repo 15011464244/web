@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>xueyuan</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="../css/xueyuan.css">
+
+</head>
+<body>
+	   <header>
+	   		<div class="coner">
+	   			  <div class="h1">
+	   			  		<ul>
+	   			  			<li><a href="">在校学生</a></li>
+	   			  			<li><a href="">教职员工</a></li>
+	   			  			<li><a href="">校友</a></li>
+	   			  			<li><a href="">未来学生</a></li>
+	   			  			<li><a href="">未来教职工</a></li>
+	   			  		</ul>	         
+	   			  </div> 
+	   			  <div class="h2">
+	   			  		<ul>
+	   			  			<li><a href="">繁体中文</a></li>
+	   			  			<li><a href="">怀念旧版</a></li>
+	   			  			<li><a href="">English</a></li>
+	   			  		</ul>
+	   			  		<input type="" name="" value="请输入关键字" />
+	   			  </div>    
+	   		</div>
+	   </header>
+	   <div class="second">
+	   		<div class="coner">
+		   		<img  id="s1" src="../img/xueyuan_06.png"/>
+		   		<img  id="s2" src="../img/xueyuan_03.png"/>
+	   		</div>
+	   </div>	
+	   <div class="title">
+	   		<div class="coner">
+	   			<ul>
+	   				<li><a href="">剑桥概览</a><div></div></li>
+	   				<li><a href="">机构设置</a><div></div></li>
+	   				<li><a href="">人才培养</a><div></div></li>
+	   				<li><a href="">学术研究</a><div></div></li>
+	   				<li><a href="">校园文化</a><div></div></li>
+	   				<li><a href="">合作交流</a><div></div></li>
+	   				<li><a href="">招生就业</a><div></div></li>
+	   				<li><a href="">校友会</a><div></div></li>
+	   				<li><a href="">荣誉榜</a><div></div></li>
+	   				<li><a href="">公开事项</a><div></div></li>
+	   			</ul>
+	   		</div>
+	   </div>
+	   <div class="banner">
+	   		<div class="coner">
+	   			
+	   		</div>
+	   </div>
+	   <article>
+	   		<div class="coner">
+		   		<div class="firstCol" >
+		   			<div class="firstColRow1">
+		   				<div id="aa">
+		   					<ul>
+		   						<li>
+		   							图片
+		   							<img src="">
+		   						</li>
+		   						<li>
+		   							视频
+		   							<img src="">
+		   						</li>
+		   						<li>
+		   							名师
+		   							<img src="">
+		   						</li>
+		   					</ul>
+		   					<hr/>
+		   				</div>
+		   				<div id="bb">
+		   					<img src="../img/xueyuan_08.png">
+		   				</div>
+		   			</div>
+		   			<div class="firstColRow2">
+		   				<div id="cc">
+		   					<ul>
+		   						<li>
+		   							讲座报告
+		   							<img src="">
+		   						</li>
+		   						<li>
+		   							校园活动
+		   							<img src="">
+		   						</li>
+		   						<li>
+		   							学校日历
+		   							<img src="">
+		   						</li>
+		   					</ul>
+		   					<hr/>
+		   				</div>
+		   				<div id="dd">
+		   					<img src="../img/xueyuan_08.png">
+		   				</div>
+		   			</div>
+		   		</div>
+		   		<div class="secondCol">
+					<div class="secondColRow1">
+		   				<div id="aa">
+							<div>
+								<ul class="a1">
+									<li>
+										快讯
+										<img src="">
+									</li>
+									<li>
+										院部动态
+										<img src="">
+									</li>
+									<li>
+										媒体关注
+										<img src="">
+									</li>
+								</ul>
+								<div id=“abc”>
+									<a href="">>>剑桥新闻网</a>
+								</div>
+							</div>
+		   					<hr/>
+		   				</div>
+		   				<div id="bb">
+		   					<img src="../img/xueyuan_08.png">
+		   				</div>
+		   			</div>
+		   			<div class="secondColRow2">
+		   				<div id="cc">
+		   					<ul>
+		   						<li>
+		   							通知报告
+		   							<img src="">
+		   						</li>
+		   						<li>
+		   							学生通知
+		   							<img src="">
+		   						</li>
+		   						<li>
+		   							专栏
+		   							<img src="">
+		   						</li>
+								<li>
+		   							互动交流
+		   							<img src="">
+		   						</li>
+		   					</ul>
+		   					<hr/>
+		   				</div>
+		   				<div id="dd">
+		   					<img src="../img/xueyuan_08.png">
+		   				</div>
+		   			</div>
+				</div>
+		   		<div class="thirdCl"></div>
+	   		</div>
+	   </article>
+	   <div></div>
+</body>
+</html>

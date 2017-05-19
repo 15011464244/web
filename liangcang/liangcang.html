@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>
+	良仓
+	</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="css/liangcang.css">
+</head>
+<body>
+    <div class="fixed">
+    	<div class="header">
+    		<div class="h-core">
+    			<a href="liangcang.html"><div class="logo"></div></a>
+    			<ul class="header-right">
+    				<li class="fontcolor">
+    					<a href="login.html">登录</a><a href="zhuce.html">注册</a>
+    				</li>
+    				<li class="line"></li>
+    				<li class="shopcar">
+    					<a href="">购物车</a>
+    					<div class="shop">
+    					</div>
+    					<div class="addshop">
+    						<a href="">快去抢购良仓商品吧  </a>
+    					</div>
+    				</li>
+    				<li class="line"></li>
+    				<li class="message">
+    					<a href="">消息</a>
+    					<ul class="">
+    						<li>动态  <span>0</span></li>
+    						<li>评论  <span>0</span></li>
+    						<li>私信  <span>0</span></li>
+    						<li>粉丝  <span>0</span></li>
+    						<li>喜欢  <span>0</span></li>
+    						<li>通知  <span>0</span></li>
+    					</ul>
+    				</li>
+    				<li class="line"></li>
+    				<li>
+    					<a href="">添加良品</a>
+    				</li>
+    			</ul>
+    		</div>
+    	</div>
+    	<div class="title">
+    		<ul>
+    			<li>
+    				<a href="" style="text-align: left;">首页</a>
+    			</li>
+    			<li>
+    				<a href="">商店</a>
+    			</li>
+    				<li>
+    				<a href="">杂志</a>
+    			</li>
+    				<li>
+    				<a href="">分享</a>
+    			</li>
+    				<li>
+    				<a href="">达人</a>
+    			</li>
+    		</ul>
+    		<div class="title-right">
+    			<span></span><div id="search"><input type="" name="" placeholder="search..." ></div>
+    		</div>
+    	</div>
+    </div>
+	<div class="imgbox">
+        <ul class="banner">
+            
+            <li ><a href=""><img src="img/1010.jpg" alt=""></a></li>
+            <li ><a href=""><img src="img/1009.jpg" alt=""></a></li>
+            <li ><a href=""><img src="img/1008.jpg" alt=""></a></li>
+            <li ><a href=""><img src="img/1001.jpg" alt=""></a></li>
+            <li ><a href=""><img src="img/1006.jpg" alt=""></a></li>
+            <li ><a href=""><img src="img/1005.jpg" alt=""></a></li>
+            <li ><a href=""><img src="img/972.jpg" alt=""></a></li>
+            <li ><a href=""><img src="img/982.jpg" alt=""></a></li>
+            <li ><a href=""><img src="img/1010.jpg" alt=""></a></li>
+        </ul>
+        <span id="sp1"></span><span id="sp2"></span>
+        <ul class="banner-bottom">
+            <li style="background: #45494d"></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </div>
+    <div class="picture">
+        <div class="first-col">
+            <a href="http://www.iliangcang.com/i/topicapp/201705181808"><img src="http://7qn7hi.com1.z0.glb.clouddn.com/ware/orig/2/27/27176.jpg" class="first"></a>
+             <a href="http://www.iliangcang.com/i/topicapp/201705185537"><img src="http://7qn7hi.com1.z0.glb.clouddn.com/ware/orig/2/27/27175.jpg" class="fourth"></a>
+        </div>
+        <div class="second-col">
+            <a href="http://www.iliangcang.com/i/topicapp/201705115213"><img src="http://7qn7hi.com1.z0.glb.clouddn.com/ware/orig/2/27/27178.jpg" class="second"></a>
+        </div>
+        <div class="third-col">
+            <a href="http://www.iliangcang.com/i/topicapp/201705185227"><img src="http://7qn7hi.com1.z0.glb.clouddn.com/ware/orig/2/27/27177.jpg" class="third"></a>
+            <a href="http://www.iliangcang.com/i/topic/201705183611"><img src="http://7qn7hi.com1.z0.glb.clouddn.com/ware/orig/2/27/27174.jpg" class="fifth"></a>
+        </div>
+        
+    </div>
+    <div style="height: 3000px;"></div>
+
+</body>
+ <script src="js/jquery.js" charset="utf-8"></script>
+ <script type="text/javascript">
+  var thisURL = document.URL; 
+  console.log(thisURL);
+ /*============================================title 里的搜素=========================================================*/ 
+ 	var istrue = true;
+ 	$(".title-right span").click(function(){
+ 		if (istrue) {
+ 			$("#search").animate({width:"260px",left:"0px"},"fast",function(){
+ 				istrue = false;
+	 		})
+	 		$("#search input").animate({width:"260px",left:"0px"},"fast",function(){
+	 			istrue = false;
+	 			$("#search input").focus();
+	 		})
+ 		}else{
+ 			$("#search").animate({width:"0px",left:"240px"},"fast",function(){
+ 				istrue = true;
+	 		})
+	 		$("#search input").animate({width:"0px",left:"240px"},"fast",function(){
+	 			istrue = true;
+	 		})
+ 		}
+ 	});
+    /*=====================================顶部界面的fix================================================*/ 
+    $(window).scroll(function(event) {
+        if($(window).scrollTop()>100){
+            if($(".header").is(":animated")){
+                return;
+            }
+            $(".header").slideUp("fast");
+        }
+        if ($(window).scrollTop()<100) {
+            if($(".header").is(":animated")){
+                return;
+            }
+            $(".header").slideDown("fast");
+        }
+     })
+ </script>
+ <script type="text/javascript">
+ /*=======================================  轮播图====================================================*/ 
+        var imgboxli = $(".imgbox ul li");
+        var i = 0;
+        var index =0;
+         function bottom(i){
+             for (var a = 0; a < 8; a++) {
+                $(".banner-bottom li").eq(a).css({background:"#e8e8e8"}); 
+            }
+            $(".banner-bottom li").eq(i).css({background:"#45494d"});
+            if (i == 8) {
+                $(".banner-bottom li").eq(0).css({background:"#45494d"});
+            } 
+        }
+        function next (){
+            index = i;
+            // console.log(index);
+            i = i+1    
+            if (i > 8) {
+                i = 1;
+            }
+            $(".imgbox ul li").eq(i).fadeIn(1000).siblings("li").fadeOut(1000);
+            bottom(i);
+        }
+       
+        function pre(){
+            index = i;
+            console.log(index);
+            i = i-1    
+            if (i < 0) {
+                i = 7;
+            }
+            $(".imgbox ul li").eq(i).fadeIn(1000).siblings("li").fadeOut(1000);
+            bottom(i);
+        }
+        var timer = setInterval(next,2000);
+        $("#sp2").click(function(){
+            clearInterval(timer);
+            next();
+        });
+        $("#sp1").click(function(){
+            clearInterval(timer);
+            console.log(index);
+            pre();
+        });
+        $(".imgbox").mouseenter(function(){
+            clearInterval(timer);
+        });
+        $(".imgbox").mouseleave(function(){
+            clearInterval(timer);
+            timer =setInterval(next,2000);
+        });
+
+        var aa = document.getElementsByClassName("banner-bottom")[0].children;
+        console.log(aa[1]);
+         for (var a = 0; a < 8; a++) {
+              aa[a].index = a;
+              aa[a].onclick = function(){
+                 clearInterval(timer);
+                console.log(this.index);
+                $(".imgbox ul li").eq(this.index).fadeIn(1000).siblings("li").fadeOut(1000);
+                bottom(this.index);
+                i = this.index;
+              }
+         };
+    </script>
+</html>

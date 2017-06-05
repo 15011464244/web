@@ -99,16 +99,21 @@
 		  	alert("密码长度为6-20位字符");
 		  }
 	}
-	mkpassword.onchange =function(){
-		if($("#password").val() !== $("#mkpassword").val()){
-		  	alert("您两次输入的密码不同请重新输入");
-		  }
-	}
+	// mkpassword.onchange =function(){
+	// 	if($("#password").val() !== $("#mkpassword").val()){
+	// 	  	alert("您两次输入的密码不同请重新输入");
+	// 	  }
+	// }
 	$(".loginbutton").click(function(){
-		console.log(checkbox.checked);
+		var reg1 = /[^\u4e00-\u9fa5]/;  
+		console.log(reg1.test($("#name").val()));
+		  
 		  if ($("#name").val() =="") {
 		  	alert("请输入您的用户名");
 		  	return;
+		 }else if(!reg1.test($("#name").val())){
+		 	alert("用户名是3-20位字母数字下滑线");
+		 	return;
 		  }else if ($("#password").val() =="") {
 		  	alert("请输入您的密码");
 		  	return;
@@ -121,7 +126,7 @@
 		  }else if ($("#password").val().length<6||$("#password").val().length>20) {
 		  	alert("密码长度为6-20位字符");
 		  	return;
-		  }else if (!checkbox.checked) {
+		  }else if (!checkbox.checked)/*$("#checkbox").prop("checked")*/ {
 		  	alert("请同意良仓注册条款");
 		  	return;
 		  }
@@ -129,6 +134,7 @@
 		  $.post("http://lc.shudong.wang/api_user.php",{status:"register",username:$("#name").val(),password:$("#password").val()},function(result){
 		    	var result = JSON.parse(result);
 		    	if (result.code == 0) {
+		    		localStorage.currentName=$("#name").val();
 		    		setTimeout("javascript:location.href='liangcang.html'", 1000);
 		    		alert("用户注册成功");
 		    	}else if(result.code == 2001){

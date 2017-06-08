@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        /*树叶*/
+        
+        #leaves {
+            width: 90px;
+            height: 65px;
+            position: absolute;
+            left: 900px;
+            top: 30px;
+            background: url(page.png) no-repeat;
+            background-position: 0 -150px;
+            animation: luo 8s linear infinite;
+        }
+        
+        @keyframes luo {
+            0% {
+                transform: rotateZ(-10deg) translateX(0) translateY(-250px);
+                opacity: 0;
+            }
+            30% {
+                transform: rotateZ(10deg) translateX(150px) translateY(-50px);
+                opacity: 1;
+            }
+            60% {
+                transform: rotateZ(30deg) translateX(300px) translateY(150px);
+                opacity: 0;
+            }
+            100% {
+                transform: rotateZ(30deg) translateX(300px) translateY(150px);
+                opacity: 0;
+            }
+        }
+        /*图形旋转*/
+        
+        #graph {
+            width: 350px;
+            height: 170px;
+            position: relative;
+            left: 700px;
+            top: 300px;
+        }
+        
+        #graph span {
+            position: absolute;
+        }
+        /*正方形*/
+        
+        .circular {
+            width: 137px;
+            height: 136px;
+            margin: -42px 0 0 267px;
+            z-index: 1;
+            background: url(page.png) no-repeat 0 -482px;
+            animation: circular 2s ease-in-out 2s infinite;
+        }
+        
+        @keyframes circular {
+            0% {
+                transform: rotateZ(0);
+            }
+            30% {
+                transform: rotateZ(360deg);
+            }
+            100% {
+                transform: rotateZ(360deg);
+            }
+        }
+        /*三角形*/
+        
+        .triangle {
+            width: 170px;
+            height: 170px;
+            z-index: 3;
+            margin: -50px 0 0 200px;
+            background: url(page.png) no-repeat 0 -311px;
+            animation: triangle 2s ease-in-out 1s infinite;
+        }
+        
+        @keyframes triangle {
+            0% {
+                transform: rotateZ(0);
+            }
+            30% {
+                transform: rotateZ(360deg);
+            }
+            100% {
+                transform: rotateZ(360deg);
+            }
+        }
+        /*圆形*/
+        
+        .square {
+            width: 96px;
+            height: 96px;
+            z-index: 5;
+            margin: 24px 0 0 330px;
+            background: url(page.png) no-repeat 0 -215px;
+            animation: square 2s ease-in-out infinite;
+        }
+        
+        @keyframes square {
+            0% {
+                transform: rotateZ(0);
+            }
+            30% {
+                transform: rotateZ(360deg);
+            }
+            100% {
+                transform: rotateZ(360deg);
+            }
+        }
+        /*灯泡*/
+        
+        #light {
+            width: 191px;
+            height: 267px;
+            background: url(page.png) no-repeat 0 -620px;
+            margin-left: 200px;
+            position: relative;
+        }
+        
+        .light {
+            width: 341px;
+            height: 256px;
+            background: url(page.png) no-repeat 0 -887px;
+            position: absolute;
+            left: -76px;
+            top: -76px;
+            animation: Light 2s ease-in-out 1s infinite;
+        }
+        
+        @keyframes Light {
+            0% {
+                opacity: 0;
+            }
+            30% {
+                opacity: 1;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+        /*飞机*/
+        
+        #rocket {
+            width: 300px;
+            height: 300px;
+            position: relative;
+        }
+        
+        .rocket {
+            width: 225px;
+            height: 220px;
+            background: url(page.png) no-repeat -239px 0;
+            animation: rocket 0.2s linear infinite alternate;
+        }
+        
+        @keyframes rocket {
+            0% {
+                transform: translateX(0px) translateY(0px);
+            }
+            100% {
+                transform: translateX(10px) translateY(8px);
+            }
+        }
+        
+        .line1 {
+            width: 156px;
+            height: 153px;
+            position: absolute;
+            top: -74px;
+            background: url(page.png) no-repeat -239px -220px;
+            animation: line_1 0.3s linear infinite;
+        }
+        
+        @keyframes line_1 {
+            0% {
+                opacity: 0;
+                transform: translateY(-300px) translateX(300px);
+            }
+            50% {
+                opacity: 1;
+                transform: translateY(0px) translateX(0px);
+            }
+            100% {
+                opacity: 0;
+                transform: translateY(-300px) translateX(-300px);
+            }
+        }
+        
+        .line2 {
+            width: 75px;
+            height: 73px;
+            position: absolute;
+            top: -30px;
+            background: url(page.png) no-repeat -165px -150px;
+            animation: line_2 0.3s linear infinite;
+        }
+        
+        @keyframes line_2 {
+            0% {
+                opacity: 0;
+                transform: translateY(-300px) translateX(300px);
+            }
+            50% {
+                opacity: 1;
+                transform: translateY(0px) translateX(0px);
+            }
+            100% {
+                opacity: 0;
+                transform: translateY(-300px) translateX(-300px);
+            }
+        }
+        
+        .line3 {
+            width: 156px;
+            height: 153px;
+            position: absolute;
+            top: 178px;
+            background: url(page.png) no-repeat -239px -373px;
+            animation: line_3 0.3s linear infinite;
+        }
+        
+        @keyframes line_3 {
+            0% {
+                opacity: 0;
+                transform: translateY(-300px) translateX(300px);
+            }
+            50% {
+                opacity: 1;
+                transform: translateY(0px) translateX(0px);
+            }
+            100% {
+                opacity: 0;
+                transform: translateY(-300px) translateX(-300px);
+            }
+        }
+        
+        .line4 {
+            width: 94px;
+            height: 93px;
+            position: absolute;
+            top: 180px;
+            background: url(page.png) no-repeat -395px -220px;
+            animation: line_4 0.3s linear infinite;
+        }
+        
+        @keyframes line_4 {
+            0% {
+                opacity: 0;
+                transform: translateY(-300px) translateX(300px);
+            }
+            50% {
+                opacity: 1;
+                transform: translateY(0px) translateX(0px);
+            }
+            100% {
+                opacity: 0;
+                transform: translateY(-300px) translateX(-300px);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="leaves"></div>
+    <div id="graph">
+        <span class="triangle"></span>
+        <span class="square"></span>
+        <span class="circular"></span>
+    </div>
+    <div id="light">
+        <div class="light"></div>
+    </div>
+    <div id="rocket">
+        <div class="rocket"></div>
+        <div class="line1"></div>
+        <div class="line2"></div>
+        <div class="line3"></div>
+        <div class="line4"></div>
+    </div>
+</body>
+
+
+</html>

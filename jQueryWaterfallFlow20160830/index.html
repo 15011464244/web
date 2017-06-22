@@ -21,10 +21,7 @@
   <div class="jq22-container">
       <div class="jq22-content bgcolor-3">
        <div id="div1">
-          <div class="box"><img src="img/01.jpg" alt=""></div>
-
-          <div class="box"><img src="img/04.jpg" alt=""></div>
-    
+          <div class="box"><img src="http:\/\/api.seqier.com\/public\/thumb\/2016-10-02\/1475435494-200x.jpg" alt=""></div>
         </div>
         <div style="height: 1000px"></div>
       </div>  
@@ -33,7 +30,7 @@
 <script src="js/jquery.waterfall.js"></script> 
 <script>
 var page = 1;
-var pre_page = 10;
+var pre_page = 100;
 	$("#div1").waterfall({
 	    itemClass: ".box",
 	    minColCount: 2,
@@ -47,17 +44,39 @@ var pre_page = 10;
             page++;
             var data = JSON.parse(data);
               console.log(data.showapi_res_body);
-              console.log(data.showapi_res_body);
               data = data.showapi_res_body.data;
                var str = "";
-              var templ = '<div class="box" style="opacity:0;filter:alpha(opacity=0);"><div class="pic"><img src="{{src}}" /></div></div>'
+              var templ = '<div class="box" style="opacity:0;filter:alpha(opacity=0);height:{{height}}"><div class="pic"><img src="{{src}}" /></div></div>'
 
               for(var i = 0; i < data.length; i++) {
                   str += templ.replace("{{src}}", data[i].imgurl);
-              }
-              $(str).appendTo($("#div1"));
-              success();
-              end();
+              // }
+              // for(var i =0;i<data.length;i++){
+                var imgtemp = new Image();//创建一个image对象
+                imgtemp.src = data[i].imgurl;
+                imgtemp.index = i;//指定一个检索值，用于确定是哪张图
+                // imgtemp.onload = function(){//图片加载完成后执行
+                //   var _stemp = this;//将当前指针复制给新的变量，不然会导致变量共用
+                //   realWidth = this.width;
+                //   realHeight = this.height;
+                //   console.log(realHeight);
+                  // str += templ.replace("{{height}}", imgtemp.height+"px");
+                  // if(realWidth >=_w )
+                  // {
+                  //   Imgarray[_stemp.index].style.width = _w+'px';
+                  //   Imgarray[_stemp.index].style.height = 'auto';
+                  // }
+                  // else{
+                  //   Imgarray[_stemp.index].style.width = realWidth+'px';
+                  //   Imgarray[_stemp.index].style.height = realHeight+'px';
+                  // }
+                 
+                    
+                  // }
+                }
+                 $(str).appendTo($("#div1"));
+                   success();
+                    end();
           }
          });
 	       
